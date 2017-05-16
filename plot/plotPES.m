@@ -1,7 +1,7 @@
 clc, clear, close all;
 n = 36;
 
-A = dlmread('../qchem_scan_1111_B3LYP_d3_6-31G*/energies');
+A = dlmread('../qchem_scan_1101_B3LYP_d3_6-31G*/energies');
 X = reshape(A(:,1), [n,n]);
 Y = reshape(A(:,2), [n,n]);
 V = reshape(A(:,3), [n,n]);
@@ -38,4 +38,4 @@ ylabel(h,'kcal/mol')
 set(h,'YTick',[0,5,10]);
 caxis([0 10]);
 shading interp;
-print('~/Desktop/1111', '-dpng')
+print('~/Desktop/1101', '-dpng')
