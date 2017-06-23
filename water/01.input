@@ -1,0 +1,57 @@
+&CONTROL
+  calculation       = 'cp-wf',
+  title             = "(H2O) Molecule: CP electron minimization with Wannier (PBE0)",
+  restart_mode      = "from_scratch",
+  pseudo_dir        = './',
+  outdir            = './',
+  prefix            = "water",
+  nstep             = 1000,
+  iprint            = 10,
+  isave             = 100,
+  dt                = 4.D0,
+  ekin_conv_thr     = 1.D-6,
+  etot_conv_thr     = 1.D-6,
+/
+&SYSTEM
+  ibrav             = 1,
+  celldm(1)         = 18.897519,  ! 10 Angstrom
+  nat               = 3,
+  ntyp              = 2,
+  ecutwfc           = 85.D0,
+  input_dft         = 'PBE0',  ! exx related optional
+/
+&ELECTRONS
+  emass             = 400.D0,
+  emass_cutoff      = 3.D0,
+  ortho_eps         = 1.D-8,
+  ortho_max         = 300,
+  electron_dynamics = "damp",
+  electron_damping  = 0.1D0,
+/
+&IONS
+  ion_dynamics      = "none", 
+/
+&WANNIER
+  nit               = 60,
+  calwf             = 3,
+  tolw              = 1.D-6,
+  nsteps            = 20,
+  adapt             = .FALSE.
+  wfdt              = 4.D0,
+  wf_q              = 500,
+  wf_friction       = 0.3D0,
+  exx_neigh         = 60,     ! exx related optional
+  exx_dis_cutoff    = 8.0D0,  ! exx related optional
+  exx_ps_rcut_self  = 6.0D0,  ! exx related optional
+  exx_ps_rcut_pair  = 5.0D0,  ! exx related optional
+  exx_me_rcut_self  = 9.3D0,  ! exx related optional
+  exx_me_rcut_pair  = 7.0D0,  ! exx related optional
+  exx_poisson_eps   = 1.D-6,  ! exx related optional
+/
+ATOMIC_SPECIES
+O 16.0D0 O_HSCV_PBE-1.0.UPF
+H  2.0D0 H_HSCV_PBE-1.0.UPF 
+ATOMIC_POSITIONS {bohr}
+O       -1.1874657251     -0.4801583783      0.0000000000 
+H       -1.5107955368     -0.7507678884     -0.8735721641
+H       -0.2174657251     -0.4801583783      0.0000000000                 
