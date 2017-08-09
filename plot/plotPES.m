@@ -1,18 +1,23 @@
 clc, clear, close all;
 n = 36;
 
-system = '1101';
+system = '1001';
+showpath = true;
 
 A = dlmread(strcat('../qchem_scan_', system, '_B3LYP_d3_6-31G*/energies'));
 
-if (strcmp(system, '1001'))
-    labels=[[  0,  0]; [ 25, 75]; [100,100]; [180, 20]; [212, 78]; [248,105]; [320, 80]; [ 25,140]; [205,155]; [ 28,245]; [175,215]; [220,240]; [305,255]; [355,212]; [245,290]; [ 55,285]; [ 90,270]; [135,235]];
-elseif (strcmp(system, '1101'))
-    labels=[[  0,  0]; [ 35, 65]; [ 40,130]; [110, 90]; [185,  0]; [225, 65]; [255, 92]; [315, 65]; [230,150]; [ 30,230]; [175,200]; [220,230]; [300,240]; [355,195]; [ 70,310]; [250,310]; [ 90,245]; [ 80,278]];
-elseif (strcmp(system, '1111'))
-    labels=[[  0,  0]; [ 35, 55]; [ 90, 90]; [130, 30]; [210,  0]; [235, 55]; [260, 90]; [310, 40]; [ 50,150]; [230,160]; [  0,200]; [ 30,220]; [ 80,240]; [230,220]; [290,230]; [ 70,320]; [160,195]; [200,200]];
-else
-    error('the system is never considered!\n')
+if (strcmp(system, '1001') && showpath==true)
+    labels=[[  0,360]; [ 65,283]; [ 85,275]; [120,250]; [170,218]; [199,159.6]; [247,102]; [300, 87]; [318, 78];];
+elseif (strcmp(system, '1101') && showpath==true)
+    labels=[[  0,360]; [ 40,328.5]; [60,305]; [ 82,244]; [172,200]; [225,148.5]; [252, 90]; [300.4, 85]; [310, 70];];
+elseif (strcmp(system, '1111') && showpath==true)
+    labels=[[  0,360]; [ 55,329.7]; [ 85,242]; [160 ,195]; [200,200]; [237,149.7]; [257, 92]; [303.5, 43];];
+elseif (strcmp(system, '10n01') && showpath==true)
+    labels=[[  0,360]; [ 39.1,310]; [47,300]; [ 85,242]; [147,205]; [181,180]; [205,148]; [242, 87]; [297, 38.4];];
+elseif (strcmp(system, '11n01') && showpath==true)
+    labels=[[  0,360]; [ 47,318]; [103,253]; [112.7,253]; [147,212]; [181,183]; [205,162]; [238,130]; [292.7, 74];];
+elseif (strcmp(system, '11n11') && showpath==true)
+    labels=[[  0,360]; [ 41,314.8]; [ 84,264]; [132.8,223]; [183,182]; [221,134.8]; [262, 87]; [312.8, 46];];
 end
     
 X = reshape(A(:,1), [n,n]);
@@ -48,14 +53,15 @@ ylabel('$\theta$','Interpreter','LaTex')
 set(gcf, 'Position', [0, 0, 1100, 1200]);
 h = colorbar;
 ylabel(h,'kcal/mol')
-set(h,'YTick',[0,5,10]);
-caxis([0 10]);
+set(h,'YTick',[0,4,8,12]);
+caxis([0 12]);
 shading interp;
+colormap jet;
 
 hold on;
 
 for i=1:length(labels)
-    text(labels(i,1),labels(i,2),10,num2str(i-1))
+    text(labels(i,1),labels(i,2),10,num2str(i-1),'Interpreter','LaTex');
 end
 
 print(strcat('./', system), '-dpng')
