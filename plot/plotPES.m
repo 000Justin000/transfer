@@ -1,10 +1,11 @@
 clc, clear, close all;
 n = 36;
 
-system = '11n11';
-method = '_RIMP2';
+system = '1101';
+method = '_B3LYP';
 showpath = true;
 
+labels = [];
 
 if (showpath==true)
     if (strcmp(method, '_B3LYP'))
@@ -44,23 +45,11 @@ end
     
 X = reshape(A(:,1), [n,n]);
 Y = reshape(A(:,2), [n,n]);
-V = reshape(A(:,3), [n,n]);
-Xe = zeros(n+1,n+1);
-Ye = zeros(n+1,n+1);
-Ve = zeros(n+1,n+1);
-Xe(1:n,1:n) = X;
-Ye(1:n,1:n) = Y;
-Ve(1:n,1:n) = V;
+P = reshape(A(:,3), [n,n]);
 
-Xe(n+1,:) = Xe(n,:);
-Xe(:,n+1) = Xe(:,1)+2*pi;
-Ye(:,n+1) = Ye(:,n);
-Ye(n+1,:) = Ye(1,:)+2*pi;
-Ve(n+1,:) = Ve(1,:);
-Ve(:,n+1) = Ve(:,1);
+[Xe,Ye,Ve] = meshBoard(X,Y,P);
 
 Ve = (Ve-min(min(Ve)))*627.509;
-
 surf(Xe/(2*pi)*360,Ye/(2*pi)*360,Ve);
 view(0,90);
 set(gca,'xlim',[0 360]);
