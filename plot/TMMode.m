@@ -16,6 +16,9 @@ X = reshape(A(:,1), [n,n]);
 Y = reshape(A(:,2), [n,n]);
 P = reshape(A(:,3), [n,n]);
 
+P = P*0;
+P(10,10) = -1;
+
 TM = zeros(n^2, n^2);
 for i=1:n
     for j=1:n
@@ -38,7 +41,7 @@ plot(1:n^2, eigs);
 eigv(:,1)=eigv(:,1)/sum(eigv(:,1));
 display(sum(log(eigs)));
 
-V = reshape(eigv(:,1),[n,n])';
+V = reshape(eigv(:,2),[n,n])';
 
 [Xe,Ye,Ve] = meshBoard(X,Y,V);
 surf(Xe/(2*pi)*360,Ye/(2*pi)*360,Ve);
