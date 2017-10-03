@@ -1,3 +1,3 @@
-function ii = pd(i, n)
-    ii = mod((i-1) + n, n) +1;
+function rA = pd(A, n)
+    rA = A - floor(A/n)*n;
 end

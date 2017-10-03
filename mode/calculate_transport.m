@@ -13,6 +13,25 @@ for id=1:length(systems)
     display((1/(n^2)^2)*sum(sum(exp(-Bs(:,:,id)/(300/3.16e5)))));
 end
 
-surf(X,Y, exp(-reshape(Bs(1,:,id),[n,n])/(1000/3.16e5)))
+%{
+[Xe,Ye,Ve] = meshBoard(X,Y,reshape(Bs(1,:,2),[n,n]));
+surf(Xe/(2*pi)*360,Ye/(2*pi)*360,Ve*627.509);
+view(90,90);
+shading interp;
+colormap jet;
+set(gca,'xlim',[0 360]);
+set(gca,'ylim',[0 360]);
+set(gca,'XTick',[0:180:360]);
+set(gca,'YTick',[0:180:360]);
+xlabel('$\mathbf{\theta}$','Interpreter','LaTex')
+ylabel('$\mathbf{\phi}$','Interpreter','LaTex')
+set(gca,'FontSize',30)
+set(gcf, 'Position', [0, 0, 1000, 850]);
+h = colorbar;
+ylabel(h,'kcal/mol')
+set(h,'YTick',[0,4,8,12]);
+caxis([0 12]);
+print('1101_1', '-dpng')
+%}
 
 close all;
