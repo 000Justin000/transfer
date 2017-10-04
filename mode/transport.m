@@ -2,7 +2,7 @@ addpath('../plot')
 
 n = 36;
 
-system = '1001';
+% system = '1101';
 method = '_B3LYP';
 labels = [];
 
