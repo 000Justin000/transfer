@@ -8,7 +8,7 @@ set_range
 xlabel('','Interpreter','LaTex')
 set(gca,'XTickLabel',[]);
 ylabel('$\mathbf{\phi}$','Interpreter','LaTex')
-set(gca,'YTickLabel',['-180';' 180';' 180']);
+set(gca,'YTickLabel',['-180';'   0';' 180']);
 set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
@@ -92,8 +92,8 @@ axes(ha(4));
 surf(Xe,Ye,VE(:,:,4));
 view( 0,90);
 set_range
-set(gca,'XTickLabel',['-180';' 180';' 180']);
-set(gca,'YTickLabel',['-180';' 180';' 180']);
+set(gca,'XTickLabel',['-180';'   0';' 180']);
+set(gca,'YTickLabel',['-180';'   0';' 180']);
 xlabel('$\mathbf{\theta}$','Interpreter','LaTex')
 ylabel('$\mathbf{\phi}$','Interpreter','LaTex')
 set(gca,'FontSize',24)
@@ -121,7 +121,7 @@ axes(ha(5));
 surf(Xe,Ye,VE(:,:,5));
 view( 0,90);
 set_range
-set(gca,'XTickLabel',['-180';' 180';' 180']);
+set(gca,'XTickLabel',['-180';'   0';' 180']);
 xlabel('$\mathbf{\theta}$','Interpreter','LaTex')
 set(gca,'YTickLabel',[]);
 ylabel('','Interpreter','LaTex')
@@ -151,7 +151,7 @@ axes(ha(6));
 surf(Xe,Ye,VE(:,:,6));
 view( 0,90);
 set_range
-set(gca,'XTickLabel',['-180';' 180';' 180']);
+set(gca,'XTickLabel',['-180';'   0';' 180']);
 xlabel('$\mathbf{\theta}$','Interpreter','LaTex')
 set(gca,'YTickLabel',[]);
 ylabel('','Interpreter','LaTex')
