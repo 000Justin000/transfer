@@ -16,7 +16,7 @@ end
 %{
 [Xe,Ye,Ve] = meshBoard(X,Y,reshape(Bs(1,:,2),[n,n]));
 surf(Xe/(2*pi)*360,Ye/(2*pi)*360,Ve*627.509);
-view(90,90);
+view(0,90);
 shading interp;
 colormap jet;
 set(gca,'xlim',[0 360]);
@@ -31,7 +31,6 @@ h = colorbar;
 ylabel(h,'kcal/mol')
 set(h,'YTick',[0,4,8,12]);
 caxis([0 12]);
-print('1101_1', '-dpng')
 %}
 
 close all;
