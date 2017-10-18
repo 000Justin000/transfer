@@ -1,42 +1,27 @@
 clc, clear, close all;
 n = 36;
 
-system1 = '1001';
-system2 = '1101';
-system3 = '1111';
-system4 = '10n01';
-system5 = '11n01';
-system6 = '11n11';
+E(1,:) = [-765.8625284, -765.8593637, -765.8626253];
+E(2,:) = [-805.1941033, -805.1899081, -805.1983216];
+E(3,:) = [-844.5291226, -844.5235069, -844.5292216];
+E(4,:) = [-688.2160957, -688.2143823, -688.2165736];
+E(5,:) = [-727.5472373, -727.5412896, -727.5466693];
+E(6,:) = [-766.8750755, -766.8725223, -766.8762837];
 
-method = '_wB97M-V';
+E(1,:) = (E(1,:)-min(E(1,:)))*627.509;
+E(2,:) = (E(2,:)-min(E(2,:)))*627.509;
+E(3,:) = (E(3,:)-min(E(3,:)))*627.509;
+E(4,:) = (E(4,:)-min(E(4,:)))*627.509;
+E(5,:) = (E(5,:)-min(E(5,:)))*627.509;
+E(6,:) = (E(6,:)-min(E(6,:)))*627.509;
 
-A(:,:,1) = dlmread(strcat('../qchem_path_', system1, method, '_None_aug-cc-pVTZ/energies'));
-A(:,:,2) = dlmread(strcat('../qchem_path_', system2, method, '_None_aug-cc-pVTZ/energies'));
-A(:,:,3) = dlmread(strcat('../qchem_path_', system3, method, '_None_aug-cc-pVTZ/energies'));
-A(:,:,4) = dlmread(strcat('../qchem_path_', system4, method, '_None_aug-cc-pVTZ/energies'));
-A(:,:,5) = dlmread(strcat('../qchem_path_', system5, method, '_None_aug-cc-pVTZ/energies'));
-A(:,:,6) = dlmread(strcat('../qchem_path_', system6, method, '_None_aug-cc-pVTZ/energies'));
+hx = tight_subplot(1,3,[0.040, 0.020],[0.10, 0.03],[0.05 0.01]);
+% axes(hx(1)); plot(1:3, E(1,:),  '-r^', 'MarkerFaceColor', 'r', 'MarkerEdgeColor', 'k','MarkerSize', 7, 'linewidth', 1.5); xlim([0.7,3.3]); ylim([0,8]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']);                  legend('1a'); hold on; ylabel('\textbf{kcal/mol}', 'Interpreter', 'latex', 'FontSize', 15);
+% axes(hx(2)); plot(1:3, E(2,:),  '-ro', 'MarkerFaceColor', 'r', 'MarkerEdgeColor', 'k','MarkerSize', 7, 'linewidth', 1.0); xlim([0.7,3.3]); ylim([0,8]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']); yticklabels([]); legend('1b'); hold on;
+% axes(hx(3)); plot(1:3, E(3,:),  '-rs', 'MarkerFaceColor', 'r', 'MarkerEdgeColor', 'k','MarkerSize', 9, 'linewidth', 1.0); xlim([0.7,3.3]); ylim([0,8]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']); yticklabels([]); legend('1c'); hold on;
+% set(gcf, 'Position', [0, 0, 1200, 516]);
 
-E(:,1) = (A(:,3,1)-min(A(:,3,1)))'*627.509;
-E(:,2) = (A(:,3,2)-min(A(:,3,2)))'*627.509;
-E(:,3) = (A(:,3,3)-min(A(:,3,3)))'*627.509;
-E(:,4) = (A(:,3,4)-min(A(:,3,4)))'*627.509;
-E(:,5) = (A(:,3,5)-min(A(:,3,5)))'*627.509;
-E(:,6) = (A(:,3,6)-min(A(:,3,6)))'*627.509;
-
-set(gcf, 'Position', [0, 0, 1000, 550]);
-
-plot(1:9, E(:,1), ':ro',  ...
-     1:9, E(:,4), ':bo',  ...
-     1:9, E(:,2), '-ro',  ...
-     1:9, E(:,5), '-bo',  ...
-     1:9, E(:,3), '--ro', ...
-     1:9, E(:,6), '--bo', ...
-     'linewidth', 2);
-columnlegend(3, cellstr(['102/1a'; '065/1d'; '121/1b'; '094/1e'; '096/1c'; '088/1f']),'Orientation','vertical','location', 'north', 'boxon');
-ylim([0,5]);
-xlabel('config');
-ylabel('kcal/mol');
-xticks(1:length(E));
-xticklabels(string([0:length(E)-2,0]));
-yticks(0:5);
+axes(hx(1)); plot(1:3, E(4,:),  '-b^', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'k','MarkerSize', 7, 'linewidth', 1.5); xlim([0.7,3.3]); ylim([0,6]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']);                  legend('1d'); hold on; ylabel('\textbf{kcal/mol}', 'Interpreter', 'latex', 'FontSize', 15);
+axes(hx(2)); plot(1:3, E(5,:),  '-bo', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'k','MarkerSize', 7, 'linewidth', 1.0); xlim([0.7,3.3]); ylim([0,6]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']); yticklabels([]); legend('1e'); hold on;
+axes(hx(3)); plot(1:3, E(6,:),  '-bs', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'k','MarkerSize', 9, 'linewidth', 1.0); xlim([0.7,3.3]); ylim([0,6]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']); yticklabels([]); legend('1f'); hold on;
+set(gcf, 'Position', [0, 0, 1200, 400]);

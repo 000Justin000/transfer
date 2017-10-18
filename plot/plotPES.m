@@ -1,17 +1,17 @@
 close all;
-clear;
 
 n = 72;
 
-system = '1001';
-method = '_B3LYP';
+% system = '11n11';
+geoms  = 'connect';
 showpath = true;
 
 labels = [];
 
-if (strcmp(method, '_B3LYP'))
-    A = dlmread(strcat('../qchem_scan_', system, method, '_d3_op_6-311++G**/energies'));
-    if (showpath==true)
+A = dlmread(strcat('../qchem_scan_', system, '_B3LYP', '_d3_op_6-311++G**/energies'));
+
+if (showpath==true)
+    if (strcmp(geoms, 'critical'))
         switch system
             case '1001'  %[ 24.4, -22.8]
                 labels = [[0,0]; [ 35, -80]; [100, -105]; [145, -150]; [175, 155]; [-145, 125]; [-100,   90]; [-45, 60]; [-30, -75]; [-30,110]; [140,115];];
@@ -27,24 +27,20 @@ if (strcmp(method, '_B3LYP'))
             case '11n11' %[ 135.7, -58.7];
                 labels = [[   0,   0]; [ 40, -40]; [90,-75]; [125, -120]; [165,-170]; [-140, 155]; [-80, 110]; [ -40, 60]];
         end
-    end
-elseif (strcmp(method, '_RIMP2'))
-    A = dlmread(strcat('../qchem_sp_', system, method, '_None_aug-cc-pVDZ/energies'));  
-    if (showpath==true)        
+    elseif (strcmp(geoms, 'connect'))
         switch system
             case '1001'
-                labels=[[  0,360]; [ 35,310]; [ 95,275]; [135,240]; [180,213]; [199,150]; [247,102]; [318, 78];];
+                labels = [[  0,  0]; [ 35, -80]; [100, -105]];
             case '1101'
-                labels=[[  0,360]; [ 65,310]; [ 78,250]; [178,195]; [225,148]; [252, 90]; [310, 70]; ...
-                        [358,190]; [ 45,135]; [100, 90]; [120, 65]; [182,  3]; [240,315]; [295,240];];
+                labels = [[  0,  0]; [ 40, -60]; [ 95, -105]];
             case '1111'
-                labels=[[  0,360]; [ 62,325]; [ 85,255]; [130,200]; [185,195]; [230,160]; [257, 92]; [298, 40];];
+                labels = [[  0,  0]; [ 55, -40]; [ 95,  -90]];
             case '10n01'
-                labels=[[  0,360]; [ 44,302]; [ 90,245]; [150,198]; [176,180]; [198,153]; [248, 87]; [302, 43];];
+                labels = [[  0,  0]; [ 40, -60]; [ 90, -120]];
             case '11n01'
-                labels=[[  0,360]; [108,253]; [230,130]; [293, 72]; [  0,190]; [118, 72]; [212,335]; [288, 255];];
+                labels = [[  0,  0]; [ 70, -90]; [130, -145]];
             case '11n11'
-                labels=[[  0,360]; [ 40,313]; [ 75,268]; [133,226]; [187,185]; [223,136]; [265, 77]; [310, 46];];
+                labels = [[  0,  0]; [ 40, -40]; [ 90,  -75]];
         end
     end
 end
@@ -81,4 +77,4 @@ for i=1:size(labels,1)
     text(labels(i,1),labels(i,2),10,num2str(i-1),'Interpreter','LaTex','FontSize',14,'Color','black');
 end
 
-print(strcat('./', system, method), '-dpng')
+print(strcat('./', system, '_B3LYP'), '-dpng')

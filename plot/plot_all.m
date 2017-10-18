@@ -1,24 +1,25 @@
 close all;
 
-ha = tight_subplot(2,3,[0.040, 0.050],[0.10, 0.03],[0.075 0.07]);
+set(0,'DefaultTextInterpreter', 'latex')
+ha = tight_subplot(2,3,[0.040, 0.040],[0.10, 0.03],[0.065 0.07]);
 axes(ha(1));
 surf(Xe,Ye,VE(:,:,1));
 view( 0,90);
 set_range
-xlabel('','Interpreter','LaTex')
+xlabel('','Interpreter','LaTex');
 set(gca,'XTickLabel',[]);
-ylabel('$\mathbf{\phi}$','Interpreter','LaTex')
-set(gca,'YTickLabel',['-180';'   0';' 180']);
+hy = ylabel('$\mathbf{\phi}$','Interpreter','LaTex'); hy.Position = hy.Position + [50, 0, 0];
+set(gca,'YTickLabel',['-180^{\circ}';'   0^{\circ}';' 180^{\circ}']);
 set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-t=text(20,20,10,'1a','Interpreter','LaTex');
-t.FontSize=30;
+t=text(140,160,10,'1a','Interpreter','LaTex');
+t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,1);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, '*w', 'LineWidth', 1.5);
+plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':*w', 'LineWidth', 1.5);
 
 %{
 for i=1:length(labels)
@@ -42,12 +43,12 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-t=text(20,20,10,'1b','Interpreter','LaTex');
-t.FontSize=30;
+t=text(140,160,10,'1b','Interpreter','LaTex');
+t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,2);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, '*w', 'LineWidth', 1.5);
+plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':*w', 'LineWidth', 1.5);
 
 %{
 for i=1:length(labels)
@@ -71,12 +72,12 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-t=text(20,20,10,'1c','Interpreter','LaTex');
-t.FontSize=30;
+t=text(140,160,10,'1c','Interpreter','LaTex');
+t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,3);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, '*w', 'LineWidth', 1.5);
+plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':*w', 'LineWidth', 1.5);
 
 %{
 for i=1:length(labels)
@@ -92,20 +93,20 @@ axes(ha(4));
 surf(Xe,Ye,VE(:,:,4));
 view( 0,90);
 set_range
-set(gca,'XTickLabel',['-180';'   0';' 180']);
-set(gca,'YTickLabel',['-180';'   0';' 180']);
-xlabel('$\mathbf{\theta}$','Interpreter','LaTex')
-ylabel('$\mathbf{\phi}$','Interpreter','LaTex')
+set(gca,'XTickLabel',['-180^{\circ}';'   0^{\circ}';' 180^{\circ}']);
+set(gca,'YTickLabel',['-180^{\circ}';'   0^{\circ}';' 180^{\circ}']);
+hx = xlabel('$\mathbf{\theta}$','Interpreter','LaTex');  hx.Position = hx.Position + [6, 0, 0];
+hy = ylabel('$\mathbf{\phi}$','Interpreter','LaTex');    hy.Position = hy.Position + [65, 0, 0];
 set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-t=text(20,20,10,'1d','Interpreter','LaTex');
-t.FontSize=30;
+t=text(140,160,10,'1d','Interpreter','LaTex');
+t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,4);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, '*w', 'LineWidth', 1.5);
+plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':*w', 'LineWidth', 1.5);
 
 %{
 for i=1:length(labels)
@@ -121,8 +122,8 @@ axes(ha(5));
 surf(Xe,Ye,VE(:,:,5));
 view( 0,90);
 set_range
-set(gca,'XTickLabel',['-180';'   0';' 180']);
-xlabel('$\mathbf{\theta}$','Interpreter','LaTex')
+set(gca,'XTickLabel',['-180^{\circ}';'   0^{\circ}';' 180^{\circ}']);
+hx = xlabel('$\mathbf{\theta}$','Interpreter','LaTex');  hx.Position = hx.Position + [5, 0, 0];
 set(gca,'YTickLabel',[]);
 ylabel('','Interpreter','LaTex')
 
@@ -130,12 +131,12 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-t=text(20,20,10,'1e','Interpreter','LaTex');
-t.FontSize=30;
+t=text(140,160,10,'1e','Interpreter','LaTex');
+t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,5);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, '*w', 'LineWidth', 1.5);
+plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':*w', 'LineWidth', 1.5);
 
 %{
 for i=1:length(labels)
@@ -151,20 +152,20 @@ axes(ha(6));
 surf(Xe,Ye,VE(:,:,6));
 view( 0,90);
 set_range
-set(gca,'XTickLabel',['-180';'   0';' 180']);
-xlabel('$\mathbf{\theta}$','Interpreter','LaTex')
+set(gca,'XTickLabel',['-180^{\circ}';'   0^{\circ}';' 180^{\circ}']);
+h = xlabel('$\mathbf{\theta}$','Interpreter','LaTex');  h.Position = h.Position + [6, 0, 0];
 set(gca,'YTickLabel',[]);
 ylabel('','Interpreter','LaTex')
 set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-t=text(20,20,10,'1f','Interpreter','LaTex');
-t.FontSize=30;
+t=text(140,160,10,'1f','Interpreter','LaTex');
+t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,6);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, '*w', 'LineWidth', 1.5);
+plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':*w', 'LineWidth', 1.5);
 
 %{
 for i=1:length(labels)
