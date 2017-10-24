@@ -1,5 +1,8 @@
 close all;
 
+% namelist = ['1a'; '1b'; '1c'; '1d'; '1e'; '1f'];
+namelist = ["1g"; "1h"; "1i"; "1j"; "1k"; "1l"];
+
 set(0,'DefaultTextInterpreter', 'latex')
 ha = tight_subplot(2,3,[0.040, 0.040],[0.10, 0.03],[0.065 0.07]);
 axes(ha(1));
@@ -14,7 +17,7 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-t=text(140,160,10,'1a','Interpreter','LaTex');
+t=text(140,160,10,namelist(1),'Interpreter','LaTex');
 t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,1);
@@ -43,7 +46,7 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-t=text(140,160,10,'1b','Interpreter','LaTex');
+t=text(140,160,10,namelist(2),'Interpreter','LaTex');
 t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,2);
@@ -72,7 +75,7 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-t=text(140,160,10,'1c','Interpreter','LaTex');
+t=text(140,160,10,namelist(3),'Interpreter','LaTex');
 t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,3);
@@ -101,7 +104,7 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-t=text(140,160,10,'1d','Interpreter','LaTex');
+t=text(140,160,10,namelist(4),'Interpreter','LaTex');
 t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,4);
@@ -131,7 +134,7 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-t=text(140,160,10,'1e','Interpreter','LaTex');
+t=text(140,160,10,namelist(5),'Interpreter','LaTex');
 t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,5);
@@ -160,7 +163,7 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-t=text(140,160,10,'1f','Interpreter','LaTex');
+t=text(140,160,10,namelist(6),'Interpreter','LaTex');
 t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,6);
@@ -188,4 +191,4 @@ set(gca,'FontSize',24)
 
 set(gcf, 'Position', [0, 0, 1600, 2000]);
 
-print('~/1a-1f', '-dpng', '-r300');
+print('~/1g-1l', '-dpng', '-r300');
