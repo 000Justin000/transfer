@@ -1,7 +1,7 @@
 close all;
 
-% namelist = ['1a'; '1b'; '1c'; '1d'; '1e'; '1f'];
-namelist = ["1g"; "1h"; "1i"; "1j"; "1k"; "1l"];
+namelist = ["2a"; "2b"; "2c"; "2d"; "2e"; "2f"];
+% namelist = ["1g"; "1h"; "1i"; "1j"; "1k"; "1l"];
 
 set(0,'DefaultTextInterpreter', 'latex')
 ha = tight_subplot(2,3,[0.040, 0.040],[0.10, 0.03],[0.065 0.07]);
@@ -22,7 +22,7 @@ t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,1);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':*w', 'LineWidth', 1.5);
+plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':ow', 'LineWidth', 1.5, 'MarkerSize', 7);
 
 %{
 for i=1:length(labels)
@@ -51,7 +51,8 @@ t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,2);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':*w', 'LineWidth', 1.5);
+plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':ow', 'LineWidth', 1.5, 'MarkerSize', 7);
+
 
 %{
 for i=1:length(labels)
@@ -80,7 +81,7 @@ t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,3);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':*w', 'LineWidth', 1.5);
+plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':ow', 'LineWidth', 1.5, 'MarkerSize', 7);
 
 %{
 for i=1:length(labels)
@@ -109,7 +110,7 @@ t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,4);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':*w', 'LineWidth', 1.5);
+plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':ow', 'LineWidth', 1.5, 'MarkerSize', 7);
 
 %{
 for i=1:length(labels)
@@ -139,7 +140,7 @@ t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,5);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':*w', 'LineWidth', 1.5);
+plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':ow', 'LineWidth', 1.5, 'MarkerSize', 7);
 
 %{
 for i=1:length(labels)
@@ -168,7 +169,7 @@ t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,6);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':*w', 'LineWidth', 1.5);
+plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':ow', 'LineWidth', 1.5, 'MarkerSize', 7);
 
 %{
 for i=1:length(labels)
@@ -191,4 +192,4 @@ set(gca,'FontSize',24)
 
 set(gcf, 'Position', [0, 0, 1600, 2000]);
 
-print('~/1g-1l', '-dpng', '-r300');
+print('~/2a-2f', '-dpng', '-r300');
