@@ -2,8 +2,8 @@ close all;
 
 n = 72;
 
-system = '11d11';
-geoms  = 'critical';
+% system = '10n01';
+geoms  = 'connect';
 showpath = true;
 
 labels = [];
@@ -48,7 +48,7 @@ if (showpath==true)
             case '1111'
                 labels = [[  0,  0]; [ 55, -40]; [ 95,  -90]];
             case '10n01'
-                labels = [[  0,  0]; [ 40, -60]; [ 90, -120]];
+                labels = [[  0,  0]; [ 45, -65]; [ 90, -120]];
             case '11n01'
                 labels = [[  0,  0]; [ 70, -90]; [130, -145]];
             case '11n11'
@@ -74,6 +74,9 @@ P = reshape(A(:,3), [n,n])';
 P = (P-min(min(P)))*627.509;
 
 [Xe,Ye,Ve] = meshBoard(X,Y,P);
+
+[Yf,Xf] = meshgrid(-180:179, -180:179);
+Pf = interp2(Ye, Xe, Ve, Yf, Xf, 'spline');
 
 % [Ye,Xe] = deal(Xe,Ye); % swap
 

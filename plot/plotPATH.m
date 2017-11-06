@@ -1,5 +1,4 @@
 clc, clear, close all;
-n = 36;
 
 E(1,:) = [-765.8625284, -765.8593637, -765.8626253];
 E(2,:) = [-805.1941033, -805.1899081, -805.1983216];
@@ -15,13 +14,53 @@ E(4,:) = (E(4,:)-min(E(4,:)))*627.509;
 E(5,:) = (E(5,:)-min(E(5,:)))*627.509;
 E(6,:) = (E(6,:)-min(E(6,:)))*627.509;
 
-hx = tight_subplot(1,3,[0.040, 0.020],[0.10, 0.03],[0.05 0.01]);
-% axes(hx(1)); plot(1:3, E(1,:),  '-r^', 'MarkerFaceColor', 'r', 'MarkerEdgeColor', 'k','MarkerSize', 7, 'linewidth', 1.5); xlim([0.7,3.3]); ylim([0,8]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']);                  legend('1a'); hold on; ylabel('\textbf{kcal/mol}', 'Interpreter', 'latex', 'FontSize', 15);
-% axes(hx(2)); plot(1:3, E(2,:),  '-ro', 'MarkerFaceColor', 'r', 'MarkerEdgeColor', 'k','MarkerSize', 7, 'linewidth', 1.0); xlim([0.7,3.3]); ylim([0,8]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']); yticklabels([]); legend('1b'); hold on;
-% axes(hx(3)); plot(1:3, E(3,:),  '-rs', 'MarkerFaceColor', 'r', 'MarkerEdgeColor', 'k','MarkerSize', 9, 'linewidth', 1.0); xlim([0.7,3.3]); ylim([0,8]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']); yticklabels([]); legend('1c'); hold on;
-% set(gcf, 'Position', [0, 0, 1200, 516]);
+rcoord  = 1.0:0.01:3.0;
+EE(1,:) = pchipd(1:3, E(1,:), [0.0, 0.0, 0.0], rcoord);
+EE(2,:) = pchipd(1:3, E(2,:), [0.0, 0.0, 0.0], rcoord);
+EE(3,:) = pchipd(1:3, E(3,:), [0.0, 0.0, 0.0], rcoord);
+EE(4,:) = pchipd(1:3, E(4,:), [0.0, 0.0, 0.0], rcoord);
+EE(5,:) = pchipd(1:3, E(5,:), [0.0, 0.0, 0.0], rcoord);
+EE(6,:) = pchipd(1:3, E(6,:), [0.0, 0.0, 0.0], rcoord);
 
-axes(hx(1)); plot(1:3, E(4,:),  '-b^', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'k','MarkerSize', 7, 'linewidth', 1.5); xlim([0.7,3.3]); ylim([0,6]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']);                  legend('1d'); hold on; ylabel('\textbf{kcal/mol}', 'Interpreter', 'latex', 'FontSize', 15);
-axes(hx(2)); plot(1:3, E(5,:),  '-bo', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'k','MarkerSize', 7, 'linewidth', 1.0); xlim([0.7,3.3]); ylim([0,6]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']); yticklabels([]); legend('1e'); hold on;
-axes(hx(3)); plot(1:3, E(6,:),  '-bs', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'k','MarkerSize', 9, 'linewidth', 1.0); xlim([0.7,3.3]); ylim([0,6]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']); yticklabels([]); legend('1f'); hold on;
-set(gcf, 'Position', [0, 0, 1200, 400]);
+hx = tight_subplot(1,2,[0.040, 0.020],[0.03, 0.03],[0.08 0.01]);
+
+axes(hx(1)); 
+plot(rcoord, EE(1,:),  ':r', rcoord, EE(2,:),  '-r',  rcoord, EE(3,:),  '-.r', 'linewidth', 1.5); hold on;
+scatter(1:3, E(1,:), 'ro', 'MarkerEdgeColor', 'k', 'MarkerFaceColor', 'r');
+scatter(1:3, E(2,:), 'ro', 'MarkerEdgeColor', 'k', 'MarkerFaceColor', 'r');
+scatter(1:3, E(3,:), 'ro', 'MarkerEdgeColor', 'k', 'MarkerFaceColor', 'r');
+set(gca, 'fontSize', 15)
+
+xlim([0.7,3.3]);
+xlabel('');
+xticks([1:3]); 
+xticklabels([]);
+ylim([0,8]);
+ylabel('\textbf{kcal/mol}', 'Interpreter', 'latex', 'FontSize', 17);
+yticks(0:8);
+legend(["2a", "2b", "2c"]); hold on; 
+
+
+axes(hx(2)); 
+plot(rcoord, EE(4,:),  ':b', rcoord, EE(5,:),  '-b',  rcoord, EE(6,:),  '-.b', 'linewidth', 1.5); hold on;
+scatter(1:3, E(4,:), 'bo', 'MarkerEdgeColor', 'k', 'MarkerFaceColor', 'b');
+scatter(1:3, E(5,:), 'bo', 'MarkerEdgeColor', 'k', 'MarkerFaceColor', 'b');
+scatter(1:3, E(6,:), 'bo', 'MarkerEdgeColor', 'k', 'MarkerFaceColor', 'b');
+set(gca, 'fontSize', 15)
+
+xlim([0.7,3.3]);
+xlabel('');
+xticks([1:3]); 
+xticklabels([]);
+ylim([0,8]); 
+ylabel('');
+yticks(0:8);
+yticklabels([])
+legend(["2d", "2e", "2f"]); hold on; 
+
+set(gcf, 'Position', [0, 0, 800, 500]);
+
+% axes(hx(1)); plot(1:3, E(4,:),  '-b^', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'k','MarkerSize', 7, 'linewidth', 1.5); xlim([0.7,3.3]); ylim([0,6]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']);                  legend('1d'); hold on; ylabel('\textbf{kcal/mol}', 'Interpreter', 'latex', 'FontSize', 15);
+% axes(hx(2)); plot(1:3, E(5,:),  '-bo', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'k','MarkerSize', 7, 'linewidth', 1.0); xlim([0.7,3.3]); ylim([0,6]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']); yticklabels([]); legend('1e'); hold on;
+% axes(hx(3)); plot(1:3, E(6,:),  '-bs', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'k','MarkerSize', 9, 'linewidth', 1.0); xlim([0.7,3.3]); ylim([0,6]); xticks([1:3]); xticklabels(['[        ]'; '[        ]'; '[        ]']); yticklabels([]); legend('1f'); hold on;
+% set(gcf, 'Position', [0, 0, 1200, 400]);
