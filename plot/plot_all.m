@@ -11,7 +11,7 @@ view( 0,90);
 set_range
 xlabel('','Interpreter','LaTex');
 set(gca,'XTickLabel',[]);
-hy = ylabel('$\mathbf{\phi}$','Interpreter','LaTex'); hy.Position = hy.Position + [50, 0, 0];
+hy = ylabel('$\mathbf{\phi - \phi_{0}}$','Interpreter','LaTex'); hy.Position = hy.Position + [50, 0, 0];
 set(gca,'YTickLabel',['-180^{\circ}';'   0^{\circ}';' 180^{\circ}']);
 set(gca,'FontSize',24)
 caxis([0 12]);
@@ -22,7 +22,10 @@ t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,1);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':ow', 'LineWidth', 1.5, 'MarkerSize', 7);
+% plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':w', 'LineWidth', 1.5, 'MarkerSize', 7);
+scatter3(labels(1,1),labels(1,2),10, 45, '^', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 1.2);
+scatter3(labels(2,1),labels(2,2),10, 55, 's', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 2.0);
+scatter3(labels(3,1),labels(3,2),10, 40, 'o', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 1.5);
 
 %{
 for i=1:length(labels)
@@ -51,7 +54,10 @@ t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,2);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':ow', 'LineWidth', 1.5, 'MarkerSize', 7);
+% plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':w', 'LineWidth', 1.5, 'MarkerSize', 7);
+scatter3(labels(1,1),labels(1,2),10, 45, '^', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 1.2);
+scatter3(labels(2,1),labels(2,2),10, 55, 's', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 2.0);
+scatter3(labels(3,1),labels(3,2),10, 40, 'o', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 1.5);
 
 
 %{
@@ -81,7 +87,11 @@ t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,3);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':ow', 'LineWidth', 1.5, 'MarkerSize', 7);
+% plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':w', 'LineWidth', 1.5, 'MarkerSize', 7);
+scatter3(labels(1,1),labels(1,2),10, 45, '^', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 1.2);
+scatter3(labels(2,1),labels(2,2),10, 55, 's', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 2.0);
+scatter3(labels(3,1),labels(3,2),10, 40, 'o', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 1.5);
+
 
 %{
 for i=1:length(labels)
@@ -99,8 +109,8 @@ view( 0,90);
 set_range
 set(gca,'XTickLabel',['-180^{\circ}';'   0^{\circ}';' 180^{\circ}']);
 set(gca,'YTickLabel',['-180^{\circ}';'   0^{\circ}';' 180^{\circ}']);
-hx = xlabel('$\mathbf{\theta}$','Interpreter','LaTex');  hx.Position = hx.Position + [6, 0, 0];
-hy = ylabel('$\mathbf{\phi}$','Interpreter','LaTex');    hy.Position = hy.Position + [65, 0, 0];
+hx = xlabel('$\mathbf{\theta - \theta_{0}}$','Interpreter','LaTex');  hx.Position = hx.Position + [6, 0, 0];
+hy = ylabel('$\mathbf{\phi - \phi_{0}}$','Interpreter','LaTex');    hy.Position = hy.Position + [65, 0, 0];
 set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
@@ -110,7 +120,11 @@ t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,4);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':ow', 'LineWidth', 1.5, 'MarkerSize', 7);
+% plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':w', 'LineWidth', 1.5, 'MarkerSize', 7);
+scatter3(labels(1,1),labels(1,2),10, 45, '^', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 1.2);
+scatter3(labels(2,1),labels(2,2),10, 55, 's', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 2.0);
+scatter3(labels(3,1),labels(3,2),10, 40, 'o', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 1.5);
+
 
 %{
 for i=1:length(labels)
@@ -127,7 +141,7 @@ surf(Xe,Ye,VE(:,:,5));
 view( 0,90);
 set_range
 set(gca,'XTickLabel',['-180^{\circ}';'   0^{\circ}';' 180^{\circ}']);
-hx = xlabel('$\mathbf{\theta}$','Interpreter','LaTex');  hx.Position = hx.Position + [5, 0, 0];
+hx = xlabel('$\mathbf{\theta - \theta_{0}}$','Interpreter','LaTex');  hx.Position = hx.Position + [5, 0, 0];
 set(gca,'YTickLabel',[]);
 ylabel('','Interpreter','LaTex')
 
@@ -140,7 +154,11 @@ t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,5);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':ow', 'LineWidth', 1.5, 'MarkerSize', 7);
+% plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':w', 'LineWidth', 1.5, 'MarkerSize', 7);
+scatter3(labels(1,1),labels(1,2),10, 45, '^', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 1.2);
+scatter3(labels(2,1),labels(2,2),10, 55, 's', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 2.0);
+scatter3(labels(3,1),labels(3,2),10, 40, 'o', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 1.5);
+
 
 %{
 for i=1:length(labels)
@@ -157,7 +175,7 @@ surf(Xe,Ye,VE(:,:,6));
 view( 0,90);
 set_range
 set(gca,'XTickLabel',['-180^{\circ}';'   0^{\circ}';' 180^{\circ}']);
-h = xlabel('$\mathbf{\theta}$','Interpreter','LaTex');  h.Position = h.Position + [6, 0, 0];
+h = xlabel('$\mathbf{\theta - \theta_{0}}$','Interpreter','LaTex');  h.Position = h.Position + [6, 0, 0];
 set(gca,'YTickLabel',[]);
 ylabel('','Interpreter','LaTex')
 set(gca,'FontSize',24)
@@ -169,7 +187,10 @@ t.FontSize=32;
 %-------------------------------------------
 labels=LB(:,:,6);
 hold on
-plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':ow', 'LineWidth', 1.5, 'MarkerSize', 7);
+% plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':w', 'LineWidth', 1.5, 'MarkerSize', 7);
+scatter3(labels(1,1),labels(1,2),10, 45, '^', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 1.2);
+scatter3(labels(2,1),labels(2,2),10, 55, 's', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 2.0);
+scatter3(labels(3,1),labels(3,2),10, 40, 'o', 'MarkerEdgeColor','w', 'MarkerFaceColor','r', 'LineWidth', 1.5);
 
 %{
 for i=1:length(labels)
