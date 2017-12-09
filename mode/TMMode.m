@@ -1,4 +1,4 @@
-close all;
+% close all;
 
 addpath('../plot')
 
@@ -18,6 +18,10 @@ end
 X = reshape(A(:,1), [n,n])';
 Y = reshape(A(:,2), [n,n])';
 P = reshape(A(:,3), [n,n])';
+
+X=Xf(1:2:end,1:2:end);
+Y=Yf(1:2:end,1:2:end);
+P=Pf(1:2:end,1:2:end)/607.509;
 
 TM = zeros(n^2, n^2);
 for i=1:n
@@ -54,9 +58,9 @@ end
 
 [Xe,Ye,Ve] = meshBoard(X,Y,V);
 figure
-surf(Xe/(2*pi)*360,Ye/(2*pi)*360,Ve);
+surf(Xe,Ye,Ve);
 pbaspect([1 1 1]);
-view(90,90);
+view(0,90);
 set(gca,'xlim',[0 360]);
 set(gca,'ylim',[0 360]);
 set(gca,'XTick',[0:180:360]);
@@ -66,9 +70,11 @@ ylabel('$\mathbf{\phi}$','Interpreter','LaTex')
 set(gca,'FontSize',30)
 set(gcf, 'Position', [0, 0, 1000, 850]);
 shading interp;
-colorbar;
+% colorbar;
 colormap jet;
 
+
+%{
 % calculate the Laplacian matrix
 C = diag(eigvecs_r(:,1)/sum(eigvecs_r(:,1))) * TM';
 L = diag(sum(C,2)) - C;
@@ -102,3 +108,4 @@ ylabel('$\mathbf{\phi}$','Interpreter','LaTex')
 set(gca,'FontSize',30)
 set(gcf, 'Position', [0, 0, 1000, 850]);
 colorbar;
+%}

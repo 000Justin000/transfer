@@ -2,7 +2,7 @@ close all;
 
 n = 72;
 
-% system = '10n01';
+% system = '1101';
 geoms  = 'connect';
 showpath = true;
 
@@ -42,17 +42,29 @@ if (showpath==true)
     elseif (strcmp(geoms, 'connect'))
         switch system
             case '1001'
-                labels = [[  0,  0]; [ 35, -80]; [100, -105]];
+                origin = [124.4, -22.8];
+                path_line = dlmread(strcat('path_', system));
+                labels = [[  0,  0]; [ 35, -75]; [100, -105]; [145, -150]; [175, 155]; [-145, 120]; [-95, 90]; [-55, 65]; path_line];                
             case '1101'
-                labels = [[  0,  0]; [ 40, -60]; [ 95, -105]];
+                origin = [126.0, -21.3];
+                path_line = dlmread(strcat('path_', system));
+                labels = [[  0,  0]; [ 40, -60]; [ 95, -105]; [140, -170]; [160, 155]; [-155, 160]; [-90, 90]; [-30,25]; path_line];
             case '1111'
-                labels = [[  0,  0]; [ 55, -40]; [ 95,  -90]];
+                origin = [122.8, -38.4];
+                path_line = dlmread(strcat('path_', system));
+                labels = [[  0,  0]; [ 60, -35]; [ 95,  -90]; [125, -155]; [165, 175]; [-145, 170]; [-85, 120]; [-60, 50]; path_line];
             case '10n01'
-                labels = [[  0,  0]; [ 45, -65]; [ 90, -120]];
+                origin = [129.8, -25.0];
+                path_line = dlmread(strcat('path_', system));                
+                labels = [[  0,  0]; [ 45, -65]; [ 90, -120]; [140, -165]; [-160, 155]; [-115,100]; [-95, 70]; [-60, 45]; path_line];
             case '11n01'
-                labels = [[  0,  0]; [ 70, -90]; [130, -145]];
+                origin = [106.2,  -7.2];
+                path_line = dlmread(strcat('path_', system));                
+                labels = [[  0,  0]; [ 70, -90]; [130, -145]; [-175, 160]; [-140, 130]; [-105, 105]; [-65, 65]; [35, -45]; path_line];
             case '11n11'
-                labels = [[  0,  0]; [ 40, -40]; [ 90,  -75]];
+                origin = [135.7, -58.7];
+                path_line = dlmread(strcat('path_', system));
+                labels = [[  0,  0]; [ 45, -40]; [ 90,  -75]; [125, -120]; [165, -165]; [-140, 160]; [-75, 110]; [-35, 55]; path_line];
             case '1301'
                 labels = [[  0,  0]; [ 35, -80]; [100, -105]];
             case '1331'
@@ -66,6 +78,9 @@ if (showpath==true)
         end
     end
 end
+
+labels(end+1,:) = -origin;
+labels = pdd(labels + origin, 0, 360);
     
 X = reshape(A(:,1), [n,n])';
 Y = reshape(A(:,2), [n,n])';
@@ -73,14 +88,22 @@ P = reshape(A(:,3), [n,n])';
 
 P = (P-min(min(P)))*627.509;
 
-[Xe,Ye,Ve] = meshBoard(X,Y,P);
+%%{
+Pf = P;
 
-[Yf,Xf] = meshgrid(-180:179, -180:179);
-Pf = interp2(Ye, Xe, Ve, Yf, Xf, 'spline');
+[Yf,Xf] = meshgrid(0:5:355, 0:5:355);
+Pf = pshiftm(Pf, floor(-origin(1)/5)+180, floor(-origin(2)/5)+180);
+
+labels = labels + (-origin - floor(-origin/5)*5);
+%}
+
+[Xe,Ye,Ve] = meshBoard(Xf,Yf,Pf);
+
 
 % [Ye,Xe] = deal(Xe,Ye); % swap
 
 figure;
+% contourf(X,Y,P, [0 0.2 0.5 1.0 2.0 3.0 5.0 7.0 9.0], 'ShowText','on'); colormap jet(10);
 surf(Xe,Ye,Ve);
 view( 0,90);
 set_range
@@ -98,8 +121,12 @@ colormap jet(24);
 
 hold on;
 
-for i=1:size(labels,1)
-    text(labels(i,1),labels(i,2),10,num2str(i-1),'Interpreter','LaTex','FontSize',14,'Color','black');
+% scatter3(labels(:,1)', labels(:,2)', ones(1,size(labels,1))*30, 3, 'wo', 'LineWidth', 1.5);
+
+%{
+for i=1:8
+    text(labels(i,1),labels(i,2),30,num2str(i-1),'Interpreter','LaTex','FontSize',14,'Color','black');
 end
+%}
 
 print(strcat('./', system, '_B3LYP'), '-dpng')
