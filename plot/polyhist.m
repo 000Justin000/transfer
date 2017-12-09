@@ -6,48 +6,52 @@ ccumfs = zeros(6,length(ebinf));
 for i=1:6
    e = VF(:,:,i); e = e(:);
    h = histogram(e, ebins); 
-   ccumfs(i,:) = spline(ebins, cumsum([0 h.Values])/360^2, ebinf);
+   ccumfs(i,:) = spline(ebins, cumsum([0 h.Values])/length(e), ebinf);
    ccumfs(i,ccumfs(i,:)<0) = 0;
    ccumfs(i,ccumfs(i,:)>1) = 1;
 end
 
 close all;
 
-ha = tight_subplot(2,1,[0.07, 0.00],[0.10, 0.03],[0.20 0.03]);
+ha = tight_subplot(1,2,[0.00, 0.052],[0.19, 0.03],[0.10 0.02]);
 
 axes(ha(1));
-plot(ebinf, ccumfs(1,:), ':r', ebinf, ccumfs(2,:), '-.r', ebinf, ccumfs(3,:), '-r', 'LineWidth', 2.0);
-set(gca, 'fontSize', 24)
+plot(ebinf, ccumfs(1,:), ':r', ebinf, ccumfs(2,:), '-.r', ebinf, ccumfs(3,:), '-r', 'LineWidth', 3.0);
+set(gca, 'fontSize', 23)
 xlim([0 14])
-xlabel('');
+xlabel('\bf{E_{thresh}} \rm{(kcal/mol)}','Interpreter','tex', 'FontSize', 23, 'FontName','Helvetica');
 xticks(0:2:14);
-xticklabels([])
+set(gca,'TickLabelInterpreter','tex');
+xticklabels(["0","  ","4","  ","8","  ","12","  "])
 ylim([0 1])
 % ylabel('\textbf{fraction}','Interpreter','LaTex', 'FontSize', 30);
 yticks(0.0:0.25:1.0)
 yticklabels(["0.0", "   ", "0.5", "   ", "1.0"]);
 legend(["2a", "2b", "2c"], 'Location', 'southeast');
+ax = gca;
+ax.LineWidth = 1.5;
     
-
-
 axes(ha(2));
-plot(ebinf, ccumfs(4,:), ':b', ebinf, ccumfs(5,:), '-.b', ebinf, ccumfs(6,:), '-b', 'LineWidth', 2.0);
-set(gca, 'fontSize', 24)
+plot(ebinf, ccumfs(4,:), ':b', ebinf, ccumfs(5,:), '-.b', ebinf, ccumfs(6,:), '-b', 'LineWidth', 3.0);
+set(gca, 'fontSize', 23)
 xlim([0 14])
-xlabel('$\mathbf{E_{threshold}} \ \textbf{(kcal/mol)}$','Interpreter','LaTex', 'FontSize', 30);
+xlabel('\bf{E_{thresh}} \rm{(kcal/mol)}','Interpreter','tex', 'FontSize', 23, 'FontName','Helvetica');
 xticks(0:2:14);
-xticklabels([" 0","  "," 4","  "," 8","  ","12","  "])
+set(gca,'TickLabelInterpreter','tex');
+xticklabels(["0","  ","4","  ","8","  ","12","  "])
 ylim([0 1])
 % ylabel('\textbf{fraction}','Interpreter','LaTex', 'FontSize', 30);
 yticks(0.0:0.25:1.0)
-yticklabels(["0.0", "   ", "0.5", "   ", "1.0"]);
+yticklabels([]);
 legend(["2d", "2e", "2f"], 'Location', 'southeast');
+ax = gca;
+ax.LineWidth = 1.5;
 
 %%
-hc = axes('Units','normalized', 'Position', [0.08, 0.00, 0.10, 1.00], 'XTickLabel', '', 'YTickLabel', '');
+hc = axes('Units','normalized', 'Position', [0.05, 0.10, 0.00, 0.90], 'XTickLabel', '', 'YTickLabel', '');
 axis off;
-ylabel('\textbf{fractional region below} $\mathbf{E_{threshold}}$','Interpreter','LaTex', 'FontSize', 30, 'visible','on');
+ylabel('Region  below  \bf{E_{thresh}}','Interpreter','tex', 'FontSize', 26, 'visible','on');
 
-set(gcf, 'Position', [0, 0, 600, 900]);
+set(gcf, 'Position', [0, 0, 1200, 500]);
 
 print('fractional_occupation', '-dpng', '-r300');
