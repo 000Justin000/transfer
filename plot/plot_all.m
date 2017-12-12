@@ -9,12 +9,15 @@ keyy = [90,270,180,90,270,3,357,3,357];
 
 set(0,'DefaultTextInterpreter', 'tex')
 
+[YeF,XeF] = meshgrid(0:5:360,0:5:360);
+
 ha = tight_subplot(2,3,[0.040, 0.040],[0.10, 0.03],[0.075 0.09]);
 axes(ha(1));
-surf(Xe,Ye,VE(:,:,1));
+VeF = interp2(Ye,Xe,VE(:,:,1),YeF,XeF, 'spline');
+surf(XeF, YeF, VeF);
 view( 0,90);
 set_range
-xlabel('','Interpreter','LaTex');
+xlabel('','Interpreter','tex', 'FontName','Helvetica');
 set(gca,'XTickLabel',[]);
 hy = ylabel('\fontsize{29}\bf{\phi} \fontsize{25}\rm{(degrees)}','Interpreter','tex','FontName','Helvetica'); % hy.Position = hy.Position + [50, 0, 0];
 set(gca,'YTickLabel',['  0';'180';'360']);
@@ -22,7 +25,7 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-textborder(310,330,30,namelist(1),'w','k', 0.5, 'Interpreter','tex', 'FontSize', 32);
+% textborder(310,330,30,namelist(1),'w','k', 0.5, 'Interpreter','tex', 'FontSize', 32);
 %-------------------------------------------
 labels=LB(:,:,1);
 hold on
@@ -57,7 +60,8 @@ end
 
 
 axes(ha(2));
-surf(Xe,Ye,VE(:,:,2));
+VeF = interp2(Ye,Xe,VE(:,:,2),YeF,XeF, 'spline');
+surf(XeF, YeF, VeF);
 view( 0,90);
 set_range
 set(gca,'XTickLabel',[]);
@@ -68,7 +72,7 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-textborder(310,330,30,namelist(2),'w','k', 0.5, 'Interpreter','tex', 'FontSize', 32);
+% textborder(310,330,30,namelist(2),'w','k', 0.5, 'Interpreter','tex', 'FontSize', 32);
 %-------------------------------------------
 labels=LB(:,:,2);
 hold on
@@ -113,7 +117,8 @@ end
 
 
 axes(ha(3));
-surf(Xe,Ye,VE(:,:,3));
+VeF = interp2(Ye,Xe,VE(:,:,3),YeF,XeF, 'spline');
+surf(XeF, YeF, VeF);
 view( 0,90);
 set_range
 set(gca,'XTickLabel',[]);
@@ -124,7 +129,7 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-textborder(310,330,30,namelist(3),'w','k', 0.5, 'Interpreter','tex', 'FontSize', 32);
+% textborder(310,330,30,namelist(3),'w','k', 0.5, 'Interpreter','tex', 'FontSize', 32);
 %-------------------------------------------
 labels=LB(:,:,3);
 hold on
@@ -169,7 +174,8 @@ end
 
 
 axes(ha(4));
-surf(Xe,Ye,VE(:,:,4));
+VeF = interp2(Ye,Xe,VE(:,:,4),YeF,XeF, 'spline');
+surf(XeF, YeF, VeF);
 view( 0,90);
 set_range
 set(gca,'XTickLabel',['  0';'180';'360']);
@@ -180,7 +186,7 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-textborder(310,330,30,namelist(4),'w','k', 0.5, 'Interpreter','tex', 'FontSize', 32);
+% textborder(310,330,30,namelist(4),'w','k', 0.5, 'Interpreter','tex', 'FontSize', 32);
 %-------------------------------------------
 labels=LB(:,:,4);
 hold on
@@ -222,7 +228,8 @@ end
 %-------------------------------------------
 
 axes(ha(5));
-surf(Xe,Ye,VE(:,:,5));
+VeF = interp2(Ye,Xe,VE(:,:,5),YeF,XeF, 'spline');
+surf(XeF, YeF, VeF);
 view( 0,90);
 set_range
 set(gca,'XTickLabel',['  0';'180';'360']);
@@ -234,7 +241,7 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-textborder(310,330,30,namelist(5),'w','k', 0.5, 'Interpreter','tex', 'FontSize', 32);
+% textborder(310,330,30,namelist(5),'w','k', 0.5, 'Interpreter','tex', 'FontSize', 32);
 %-------------------------------------------
 labels=LB(:,:,5);
 hold on
@@ -279,7 +286,8 @@ end
 
 
 axes(ha(6));
-surf(Xe,Ye,VE(:,:,6));
+VeF = interp2(Ye,Xe,VE(:,:,6),YeF,XeF, 'spline');
+surf(XeF, YeF, VeF);
 view( 0,90);
 set_range
 set(gca,'XTickLabel',['  0';'180';'360']);
@@ -290,7 +298,7 @@ set(gca,'FontSize',24)
 caxis([0 12]);
 shading interp;
 colormap jet(18);
-textborder(310,330,30,namelist(6),'w','k', 0.5, 'Interpreter','tex', 'FontSize', 32);
+% textborder(310,330,30,namelist(6),'w','k', 0.5, 'Interpreter','tex', 'FontSize', 32);
 %t=text(310,330,30,namelist(6),'Interpreter','tex');
 %t.FontSize=32;
 %t.Color='w';
@@ -347,7 +355,10 @@ end
 
 hc = axes('Units','normalized', 'Position', [0.12, 0.00, 0.5, 0.18], 'XTickLabel', '', 'YTickLabel', '');
 axis off;
-map = jet(25); map = map(1:24,:);
+%map = jet(48); map = [map( 1,:); map( 4,:); map( 7,:); map(10,:); map(13,:); map(16,:); map(18,:); map(20,:); map(22,:); map(24,:); map(26,:); map(28,:); ...
+%                      map(43,:); map(44,:); map(45,:); map(46,:); map(47,:); map(48,:); map(48,:); map(48,:); map(48,:); map(48,:); map(48,:); map(48,:)];
+map = jet(24);
+map(15:24,:) = [ones(10,1), linspace(1.0,0.0,10)', zeros(10,1)];
 colormap(map);
 caxis([0 12]);
 h = colorbar('Position',[0.92, 0.10, 0.015, 0.87], 'location', 'Eastoutside');

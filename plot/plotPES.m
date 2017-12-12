@@ -2,7 +2,7 @@ close all;
 
 n = 72;
 
-% system = '1101';
+% system = '1111';
 geoms  = 'connect';
 showpath = true;
 
@@ -112,7 +112,7 @@ ylabel('$\mathbf{\phi}$','Interpreter','LaTex')
 set(gca,'FontSize',30)
 set(gcf, 'Position', [0, 0, 1000, 850]);
 h = colorbar;
-ylabel(h,'kcal/mol')
+ylabel(h,'kcal/mol','Interpreter','tex', 'FontName', 'Helvetica')
 set(h,'YTick',[0,4,8,12]);
 caxis([0 12]);
 shading interp;
