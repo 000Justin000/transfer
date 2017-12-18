@@ -1,7 +1,7 @@
 function B = floyd_warshall(P)
     n = size(P,1);
     
-    B = ones(n^2, n^2) * 20;
+    B = ones(n^2, n^2) * 100;
     for i=1:n
         for j=1:n
             row=n*(j-1)+(i-1)+1; col=n*(j-1)+(i-1)+1; B(row,col)=P(i,j);
@@ -19,6 +19,11 @@ function B = floyd_warshall(P)
     end
 
     for k=1:n^2        
-        B = min(B, max(B(:,k)*ones(1,n^2), ones(n^2,1)*B(k,:)));
+        BN = min(B, max(B(:,k)*ones(1,n^2), ones(n^2,1)*B(k,:)));
+        if (isequal(B, BN))
+            break;
+        else
+            B = BN;
+        end
     end
 end
