@@ -36,8 +36,8 @@ plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth',
 plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
 plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
 plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
-scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
+% scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
+% scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 scatter3(labels(3,1),labels(3,2),20, 380, 'p', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.0);
 
 for i=1:5
@@ -83,8 +83,8 @@ plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth',
 plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
 plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
 plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
-scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
+% scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
+% scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 scatter3(labels(3,1),labels(3,2),20, 380, 'p', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.0);
 
 for i=1:5
@@ -140,8 +140,8 @@ plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth',
 plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
 plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
 plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
-scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
+% scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
+% scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 scatter3(labels(3,1),labels(3,2),20, 380, 'p', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.0);
 
 for i=1:5
@@ -196,8 +196,8 @@ plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth',
 plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
 plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
 plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
-scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
+% scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
+% scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 scatter3(labels(3,1),labels(3,2),20, 380, 'p', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.0);
 
 for i=1:5
@@ -254,8 +254,8 @@ plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w', 'LineWidth', 
 plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
 
 scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
-scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
-scatter3(labels(3,1),labels(3,2),20, 380, 'p', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.0);
+% scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
+% scatter3(labels(3,1),labels(3,2),20, 380, 'p', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.0);
 
 for i=1:5
     scatter3(keyx(i)+labels(end,1), keyy(i)+labels(end,2), 20, 350, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor',[1.0 1.0 1.0], 'LineWidth', 1.5);
@@ -312,8 +312,8 @@ plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth',
 plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
 plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
 
-scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
-scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
+% scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
+% scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 scatter3(labels(3,1),labels(3,2),20, 380, 'p', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.0);
 
 for i=1:5
@@ -358,7 +358,7 @@ axis off;
 %map = jet(48); map = [map( 1,:); map( 4,:); map( 7,:); map(10,:); map(13,:); map(16,:); map(18,:); map(20,:); map(22,:); map(24,:); map(26,:); map(28,:); ...
 %                      map(43,:); map(44,:); map(45,:); map(46,:); map(47,:); map(48,:); map(48,:); map(48,:); map(48,:); map(48,:); map(48,:); map(48,:)];
 map = jet(24);
-map(15:24,:) = [ones(10,1), linspace(1.0,0.0,10)', zeros(10,1)];
+% map(15:24,:) = [ones(10,1), linspace(1.0,0.0,10)', zeros(10,1)];
 colormap(map);
 caxis([0 12]);
 h = colorbar('Position',[0.92, 0.10, 0.015, 0.87], 'location', 'Eastoutside');
