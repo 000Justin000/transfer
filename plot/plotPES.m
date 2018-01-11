@@ -2,8 +2,8 @@ close all;
 
 n = 72;
 
-system = '11n11';
-geoms  = 'critical';
+system = '10n01';
+geoms  = 'connect';
 showpath = true;
 
 labels = [];
@@ -76,32 +76,30 @@ end
 if (strcmp(geoms, 'connect'))
     labels(end+1,:) = -origin;
 end
-% labels = pdd(labels + origin, 0, 360);
     
 X = reshape(A(:,1), [n,n])';
 Y = reshape(A(:,2), [n,n])';
-P = reshape(A(:,3), [n,n])';
+V = reshape(A(:,3), [n,n])';
 
-P = (P-min(min(P)))*627.509;
+V = (V-min(min(V)))*627.509;
 
-[Xf,Yf,Pf] = deal(X,Y,P);
+[Xf,Yf,Vf] = deal(X,Y,V);
 
-%{
-Pf = P;
-
+%%{
+labels = pdd(labels + origin, 0, 360);
 [Yf,Xf] = meshgrid(0:5:355, 0:5:355);
-Pf = pshiftm(Pf, floor(-origin(1)/5)+180, floor(-origin(2)/5)+180);
+Vf = pshiftm(Vf, floor(-origin(1)/5)+180, floor(-origin(2)/5)+180);
 
 labels = labels + (-origin - floor(-origin/5)*5);
 %}
 
-[Xe,Ye,Ve] = meshBoard(Xf,Yf,Pf);
+[Xe,Ye,Ve] = meshBoard(Xf,Yf,Vf);
 
 
 % [Ye,Xe] = deal(Xe,Ye); % swap
 
 figure;
-% contourf(X,Y,P, [0 0.2 0.5 1.0 2.0 3.0 5.0 7.0 9.0], 'ShowText','on'); colormap jet(10);
+% contourf(X,Y,V, [0 0.2 0.5 1.0 2.0 3.0 5.0 7.0 9.0], 'ShowText','on'); colormap jet(10);
 surf(Xe,Ye,Ve);
 view( 0,90);
 set_range

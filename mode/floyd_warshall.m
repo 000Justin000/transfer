@@ -1,4 +1,4 @@
-function B = floyd_warshall(P)
+function B = floyd_warshall_max(P)
     n = size(P,1);
     
     B = ones(n^2, n^2) * 100;
@@ -19,11 +19,6 @@ function B = floyd_warshall(P)
     end
 
     for k=1:n^2        
-        BN = min(B, max(B(:,k)*ones(1,n^2), ones(n^2,1)*B(k,:)));
-        if (isequal(B, BN))
-            break;
-        else
-            B = BN;
-        end
+        B = min(B, max(B(:,k)*ones(1,n^2), ones(n^2,1)*B(k,:)));
     end
 end

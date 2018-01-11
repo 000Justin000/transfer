@@ -1,4 +1,4 @@
-ebins = 0.0:2.0:14.0;
+ebins = 0.0:0.1:14.0;
 ebinf = 0.0:0.1:14.0;
 
 ccumfs = zeros(6,length(ebinf));
@@ -6,7 +6,7 @@ ccumfs = zeros(6,length(ebinf));
 for i=1:6
    e = VF(:,:,i); e = e(:);
    h = histogram(e, ebins); 
-   ccumfs(i,:) = spline(ebins, cumsum([0 h.Values])/length(e), ebinf);
+   ccumfs(i,:) = interp1(ebins, cumsum([0 h.Values])/length(e), ebinf, 'linear');
    ccumfs(i,ccumfs(i,:)<0) = 0;
    ccumfs(i,ccumfs(i,:)>1) = 1;
 end
