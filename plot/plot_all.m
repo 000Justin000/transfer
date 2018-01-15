@@ -30,16 +30,17 @@ colormap jet(18);
 labels=LB(:,:,1);
 hold on
 % plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':w', 'LineWidth', 1.5, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)* 90+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)*180+labels(end,2), ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
-plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)* 90+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)*180+labels(end,2), ones(1,361)'*15, '-w',  'LineWidth', 1.5, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w',  'LineWidth', 1.5, 'MarkerSize', 7);
+plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
 % scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 % scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 scatter3(labels(3,1),labels(3,2),20, 380, 'p', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.0);
 
+%{
 for i=1:5
     scatter3(keyx(i)+labels(end,1), keyy(i)+labels(end,2), 20, 350, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor',[1.0 1.0 1.0], 'LineWidth', 1.5);
 end
@@ -55,6 +56,7 @@ for i=6:9
     t = text(keyx(i)-7,keyy(i)-2,21, strcat("\textbf{",num2str(lb(i)),"}"),'Interpreter','LaTex');
     t.FontSize = 21;
 end
+%}
 %-------------------------------------------
 
 
@@ -77,16 +79,17 @@ colormap jet(18);
 labels=LB(:,:,2);
 hold on
 % plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':w', 'LineWidth', 1.5, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)* 90+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)*180+labels(end,2), ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
-plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)* 90+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)*180+labels(end,2), ones(1,361)'*15, '-w',  'LineWidth', 1.5, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w',  'LineWidth', 1.5, 'MarkerSize', 7);
+plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
 % scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 % scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 scatter3(labels(3,1),labels(3,2),20, 380, 'p', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.0);
 
+%{
 for i=1:5
     scatter3(keyx(i)+labels(end,1), keyy(i)+labels(end,2), 20, 350, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor',[1.0 1.0 1.0], 'LineWidth', 1.5);
 end
@@ -102,6 +105,7 @@ for i=6:9
     t = text(keyx(i)-7,keyy(i)-2,21, strcat("\textbf{",num2str(lb(i)),"}"),'Interpreter','LaTex');
     t.FontSize = 21;
 end
+%}
 %-------------------------------------------
 
 
@@ -134,16 +138,17 @@ colormap jet(18);
 labels=LB(:,:,3);
 hold on
 % plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':w', 'LineWidth', 1.5, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)* 90+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)*180+labels(end,2), ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
-plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)* 90+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)*180+labels(end,2), ones(1,361)'*15, '-w',  'LineWidth', 1.5, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w',  'LineWidth', 1.5, 'MarkerSize', 7);
+plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
 % scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 % scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 scatter3(labels(3,1),labels(3,2),20, 380, 'p', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.0);
 
+%{
 for i=1:5
     scatter3(keyx(i)+labels(end,1), keyy(i)+labels(end,2), 20, 350, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor',[1.0 1.0 1.0], 'LineWidth', 1.5);
 end
@@ -159,6 +164,7 @@ for i=6:9
     t = text(keyx(i)-7,keyy(i)-2,21, strcat("\textbf{",num2str(lb(i)),"}"),'Interpreter','LaTex');
     t.FontSize = 21;
 end
+%}
 %-------------------------------------------
 
 
@@ -190,16 +196,17 @@ colormap jet(18);
 %-------------------------------------------
 labels=LB(:,:,4);
 hold on
-plot3(0:360, ones(1,361)* 90+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)*180+labels(end,2), ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
-plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)* 90+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)*180+labels(end,2), ones(1,361)'*15, '-w',  'LineWidth', 1.5, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w',  'LineWidth', 1.5, 'MarkerSize', 7);
+plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
 % scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 % scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 scatter3(labels(3,1),labels(3,2),20, 380, 'p', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.0);
 
+%{
 for i=1:5
     scatter3(keyx(i)+labels(end,1), keyy(i)+labels(end,2), 20, 350, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor',[1.0 1.0 1.0], 'LineWidth', 1.5);
 end
@@ -215,6 +222,7 @@ for i=6:9
     t = text(keyx(i)-7,keyy(i)-2,21, strcat("\textbf{",num2str(lb(i)),"}"),'Interpreter','LaTex');
     t.FontSize = 21;
 end
+%}
 %-------------------------------------------
 
 
@@ -246,17 +254,18 @@ colormap jet(18);
 labels=LB(:,:,5);
 hold on
 % plot3(labels(:,1)', labels(:,2)', ones(size(labels(:,1)))'*10, ':w', 'LineWidth', 1.5, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)* 90+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)*180+labels(end,2), ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
-plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)* 90+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)*180+labels(end,2), ones(1,361)'*15, '-w',  'LineWidth', 1.5, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w',  'LineWidth', 1.5, 'MarkerSize', 7);
+plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
 
 scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 % scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 % scatter3(labels(3,1),labels(3,2),20, 380, 'p', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.0);
 
+%{
 for i=1:5
     scatter3(keyx(i)+labels(end,1), keyy(i)+labels(end,2), 20, 350, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor',[1.0 1.0 1.0], 'LineWidth', 1.5);
 end
@@ -272,6 +281,7 @@ for i=6:9
     t = text(keyx(i)-7,keyy(i)-2,21, strcat("\textbf{",num2str(lb(i)),"}"),'Interpreter','LaTex');
     t.FontSize = 21;
 end
+%}
 %-------------------------------------------
 
 
@@ -305,17 +315,18 @@ colormap jet(18);
 %-------------------------------------------
 labels=LB(:,:,6);
 hold on
-plot3(0:360, ones(1,361)* 90+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)*180+labels(end,2), ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
-plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
-plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w', 'LineWidth', 1.25, 'MarkerSize', 7);
-plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 0.8, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)* 90+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)*180+labels(end,2), ones(1,361)'*15, '-w',  'LineWidth', 1.5, 'MarkerSize', 7);
+plot3(0:360, ones(1,361)*270+labels(end,2), ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(ones(1,361)* 90+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
+plot3(ones(1,361)*180+labels(end,1), 0:360, ones(1,361)'*15, '-w',  'LineWidth', 1.5, 'MarkerSize', 7);
+plot3(ones(1,361)*270+labels(end,1), 0:360, ones(1,361)'*15, '--w', 'LineWidth', 1.0, 'MarkerSize', 7);
 
 % scatter3(labels(1,1),labels(1,2),20, 180, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 % scatter3(labels(2,1),labels(2,2),20, 140, '^', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.2);
 scatter3(labels(3,1),labels(3,2),20, 380, 'p', 'MarkerEdgeColor','k', 'MarkerFaceColor','y', 'LineWidth', 1.0);
 
+%{
 for i=1:5
     scatter3(keyx(i)+labels(end,1), keyy(i)+labels(end,2), 20, 350, 'o', 'MarkerEdgeColor','k', 'MarkerFaceColor',[1.0 1.0 1.0], 'LineWidth', 1.5);
 end
@@ -331,6 +342,7 @@ for i=6:9
     t = text(keyx(i)-7,keyy(i)-2,21, strcat("\textbf{",num2str(lb(i)),"}"),'Interpreter','LaTex');
     t.FontSize = 21;
 end
+%}
 %-------------------------------------------
 
 

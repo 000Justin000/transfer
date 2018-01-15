@@ -2,7 +2,7 @@ close all;
 
 n = 72;
 
-system = '10n01';
+% system = '10n01';
 geoms  = 'connect';
 showpath = true;
 
