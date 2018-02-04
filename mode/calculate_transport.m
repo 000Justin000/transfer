@@ -1,7 +1,7 @@
 systems = ["1001", "1101", "1111", "10n01", "11n01", "11n11"];
-Ts = [375, 394, 369, 338, 367, 361]/3.16e5;
+Ts = [300, 300, 300, 300, 300, 300]/3.16e5;
 
-Bs=zeros(1296,1296,length(systems));
+Bs=zeros(5184,5184,length(systems));
 
 for id=1:length(systems)
     system = systems(id);
@@ -9,8 +9,21 @@ for id=1:length(systems)
     Bs(:,:,id)=B;
 end
 
+T = 373.15;
+
 for id=1:length(systems)
-    display((1/(n^2)^2)*sum(sum(exp(-Bs(:,:,id)/(300/3.16e5)))));
+    display((1/(n^2)^2)*sum(sum(exp(-Bs(:,:,id)/(T/3.16e5)))));
+end
+
+for id=1:length(systems)
+    PT = sum(sum(exp(-Bs(:,:,id)/(T/3.16e5))));
+    Q  = sum(exp(-diag(Bs(:,:,id))/(T/3.16e5)));
+    
+    F = PT / Q;
+    
+    F_free = ((n^4)/(n^2));
+    
+    display(F/F_free);
 end
 
 %{

@@ -14,16 +14,16 @@ X = reshape(A(:,1), [n,n])';
 Y = reshape(A(:,2), [n,n])';
 P = reshape(A(:,3), [n,n])';
 
-X=Xf(1:2:end,1:2:end);
-Y=Yf(1:2:end,1:2:end);
-P=Pf(1:2:end,1:2:end)/607.509;
-n = 36;
+% X=Xf(1:2:end,1:2:end);
+% Y=Yf(1:2:end,1:2:end);
+% P=Pf(1:2:end,1:2:end)/607.509;
+% n = 36;
 
 P = (P-min(min(P)));
 
-B=floyd_warshall(P);
+B=floyd_warshall_max(P);
 
-%%{
+%{
 [Xe,Ye,Ve] = meshBoard(X,Y,reshape(B(23*36+10,:),[n,n]));
 surf(Xe,Ye,Ve*627.509);
 view(0,90);
