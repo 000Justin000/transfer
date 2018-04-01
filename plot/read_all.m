@@ -32,5 +32,5 @@ for idx=1:6
     [YeF,XeF] = meshgrid(0:1:360,0:1:360);
     BeF = interp2(Ye,Xe,Be,YeF,XeF, 'spline');
     
-    VE(:,:,idx) = Be;
+    VE(:,:,idx) = Ve;
 end
