@@ -37,7 +37,6 @@ print('2a-2c_zoom','-dsvg')
 
 
 legend(["2a", "2b", "2c"]);
-title('\textbf{binding energy per atom}', 'Interpreter', 'latex', 'FontSize', 22)
 
 axis([4.0, 10.0, -0.2, 0.4]);
 xlabel('\textbf{distance (\AA)}', 'Interpreter', 'latex', 'FontSize', 21);
@@ -95,7 +94,6 @@ print('2d-2f_zoom','-dsvg')
 
 
 legend(["2d", "2e", "2f"]);
-title('\textbf{binding energy per atom}', 'Interpreter', 'latex', 'FontSize', 22)
 
 axis([3.0, 10.0, -0.1, 0.2]);
 xlabel('\textbf{distance (\AA)}', 'Interpreter', 'latex', 'FontSize', 21);
