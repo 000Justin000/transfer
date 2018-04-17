@@ -1,0 +1,5329 @@
+mFile = /opt/software/qchem/qchem-5.0.1//bin/mpi/machines
+Process 0 of 1 is on vega01.cac.cornell.edu - thread support 0
+initial socket setup ...start
+initial socket setup ...done 
+now start server 0 ... 
+localhost 127.0.0
+Q-Chem Developer Version! Running on 127.0.0.*
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.0, Q-Chem, Inc., Pleasanton, CA (2017)
+
+ Yihan Shao,  Zhengting Gan,  E. Epifanovsky,  A. T. B. Gilbert,  M. Wormit,  
+ J. Kussmann,  A. W. Lange,  A. Behn,  Jia Deng,  Xintian Feng,  D. Ghosh,  
+ M. Goldey,  P. R. Horn,  L. D. Jacobson,  I. Kaliman,  T. Kus,  A. Landau,  
+ Jie Liu,  E. I. Proynov,  R. M. Richard,  R. P. Steele,  E. J. Sundstrom,  
+ H. L. Woodcock III,  P. M. Zimmerman,  D. Zuev,  B. Albrecht,  E. Alguire,  
+ S. A. Baeppler,  Z. Benda,  Y. A. Bernard,  E. J. Berquist,  K. B. Bravaya,  
+ D. Casanova,  Chun-Min Chang,  Yunqing Chen,  A. Chien,  K. D. Closser,  
+ M. P. Coons,  S. Dasgupta,  M. Diedenhofen,  Hainam Do,  R. G. Edgar,  
+ Po-Tung Fang,  S. Fatehi,  Qingguo Feng,  Qinghui Ge,  A. Ghysels,  
+ J. Gomes,  J. Gonthier,  A. Gunina,  M. W. D. Hanson-Heine,  
+ P. H. P. Harbach,  A. W. Hauser,  J. E. Herr,  E. G. Hohenstein,  
+ Z. C. Holden,  Kerwin Hui,  T.-C. Jagau,  Hyunjun Ji,  B. Kaduk,  
+ K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  K. Koh,  D. Kosenkov,  
+ T. Kowalczyk,  C. M. Krauter,  A. Kunitsa,  Ka Un Lao,  A. Laurent,  
+ K. V. Lawler,  Joonho Lee,  D. Lefrancois,  S. Lehtola,  D. S. Levine,  
+ Yi-Pei Li,  You-Sheng Lin,  Fenglai Liu,  E. Livshits,  A. Luenser,  
+ P. Manohar,  E. Mansoor,  S. F. Manzer,  Shan-Ping Mao,  Yuezhi Mao,  
+ N. Mardirossian,  A. V. Marenich,  L. A. Martinez-Martinez,  S. A. Maurer,  
+ N. J. Mayhall,  S. C. McKenzie,  J.-M. Mewes,  A. F. Morrison,  K. Nanda,  
+ T. S. Nguyen-Beck,  R. Olivares-Amaya,  J. A. Parkhill,  T. M. Perrine,  
+ F. Plasser,  S. Prager,  A. Prociuk,  D. R. Rehn,  F. Rob,  M. Schneider,  
+ N. Sergueev,  S. M. Sharada,  S. Sharma,  D. W. Small,  T. Stauch,  
+ T. Stein,  Yu-Chuan Su,  A. J. W. Thom,  T. Tsuchimochi,  L. Vogt,  
+ O. Vydrov,  M. A. Watson,  J. Wenzel,  M. de Wergifosse,  T. A. Wesolowski,  
+ A. White,  J. Witte,  A. Yamada,  Jun Yang,  K. Yao,  S. Yeganeh,  
+ S. R. Yost,  Zhi-Qiang You,  A. Zech,  Igor Ying Zhang,  Xing Zhang,  
+ Yan Zhao,  Ying Zhu,  B. R. Brooks,  G. K. L. Chan,  C. J. Cramer,  
+ M. S. Gordon,  W. J. Hehre,  A. Klamt,  M. W. Schmidt,  C. D. Sherrill,  
+ D. G. Truhlar,  A. Aspuru-Guzik,  R. Baer,  A. T. Bell,  N. A. Besley,  
+ Jeng-Da Chai,  A. Dreuw,  B. D. Dunietz,  T. R. Furlani,  Chao-Ping Hsu,  
+ Yousung Jung,  Jing Kong,  D. S. Lambrecht,  WanZhen Liang,  C. Ochsenfeld,  
+ V. A. Rassolov,  L. V. Slipchenko,  J. E. Subotnik,  T. Van Voorhis,  
+ J. M. Herbert,  A. I. Krylov,  P. M. W. Gill,  M. Head-Gordon
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  J. Baker,  G. J. O. Beran,  K. Brandhorst,  
+ S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. A. DiStasio Jr.,  R. J. Doerksen,  A. D. Dutoi,  L. Fusti-Molnar,  
+ W. A. Goddard III,  A. Golubeva-Zadorozhnaya,  S. R. Gwaltney,  G. Hawkins,  
+ A. Heyden,  S. Hirata,  G. Kedziora,  F. J. Keil,  C. Kelley,  Jihan Kim,  
+ R. A. King,  R. Z. Khaliullin,  P. P. Korambath,  W. Kurlancheek,  
+ A. M. Lee,  M. S. Lee,  S. V. Levchenko,  Ching Yeh Lin,  D. Liotard,  
+ R. C. Lochan,  I. Lotan,  P. E. Maslen,  N. Nair,  D. P. O'Neill,  
+ D. Neuhauser,  E. Neuscamman,  C. M. Oana,  R. Olson,  B. Peters,  
+ R. Peverati,  P. A. Pieniazek,  Y. M. Rhee,  J. Ritchie,  M. A. Rohrdanz,  
+ E. Rosta,  N. J. Russ,  H. F. Schaefer III,  N. E. Schultz,  N. Shenvi,  
+ A. C. Simmonett,  A. Sodt,  D. Stuck,  K. S. Thanthiriwatte,  V. Vanovschi,  
+ Tao Wang,  A. Warshel,  C. F. Williams,  Q. Wu,  X. Xu,  W. Zhang
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.0.1 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 5.200.1 (Boston Tea Smuggler).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Mon Apr 16 16:26:45 2018  
+
+Host: vega01.cac.cornell.edu
+0
+
+     Scratch files written to /scratch/jj585/vdw/1101_distance_4.800_01.save//
+ Parallel job on  1  processors
+
+Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$molecule
+0  1
+C        +0.24774000        +2.46323000        +5.17154000
+C        +0.65130000        +1.00482000        +5.58430000
+C        -1.15696000        +2.65058000        +4.62936000
+C        -0.34953000        -0.09808000        +5.30892000
+O        -2.06668000        +2.20667000        +5.52525000
+O        -1.44832000        +3.17774000        +3.58677000
+O        -0.88860000        -0.00957000        +4.07939000
+O        -0.59704000        -0.99042000        +6.08470000
+C        -1.83630000        -1.02906000        +3.71999000
+C        -3.44564000        +2.29327000        +5.12479000
+C        +1.35512000        +2.81809000        +4.15068000
+C        +2.65574000        +3.13535000        +4.91414000
+C        +3.06840000        +1.71186000        +5.38859000
+C        +1.96927000        +0.82536000        +4.73821000
+O        +1.65344000        +1.55498000        +3.54183000
+H        +0.30315000        +3.10621000        +6.05459000
+H        +0.86427000        +0.93793000        +6.64967000
+H        -2.66245000        -1.04842000        +4.43263000
+H        -3.73572000        +3.33357000        +4.96965000
+H        +3.39738000        +3.55617000        +4.23364000
+H        +2.50740000        +3.84323000        +5.73210000
+H        +4.04686000        +1.42829000        +4.99720000
+H        +3.09863000        +1.60573000        +6.47487000
+H        -2.18644000        -0.75930000        +2.72622000
+H        -1.35558000        -2.00862000        +3.70463000
+H        -4.01351000        +1.85458000        +5.94230000
+H        -3.60616000        +1.73535000        +4.20064000
+C        +2.37954000        -0.59432000        +4.41747000
+H        +3.28815000        -0.58843000        +3.81193000
+H        +2.57494000        -1.15224000        +5.33638000
+H        +1.59839000        -1.11061000        +3.85687000
+H        +1.05774000        +3.61778000        +3.50495000
+@C        +0.22270000        +1.04488000        +0.58595000
+@C        +0.62626000        -0.41353000        +0.99871000
+@C        -1.18200000        +1.23223000        +0.04377000
+@C        -0.37457000        -1.51643000        +0.72333000
+@O        -2.09172000        +0.78832000        +0.93966000
+@O        -1.47336000        +1.75939000        -0.99882000
+@O        -0.91364000        -1.42792000        -0.50620000
+@O        -0.62208000        -2.40877000        +1.49911000
+@C        -1.86134000        -2.44741000        -0.86560000
+@C        -3.47068000        +0.87492000        +0.53920000
+@C        +1.33008000        +1.39974000        -0.43491000
+@C        +2.63070000        +1.71700000        +0.32855000
+@C        +3.04336000        +0.29351000        +0.80300000
+@C        +1.94423000        -0.59299000        +0.15262000
+@O        +1.62840000        +0.13663000        -1.04376000
+@H        +0.27811000        +1.68786000        +1.46900000
+@H        +0.83923000        -0.48042000        +2.06408000
+@H        -2.68749000        -2.46677000        -0.15296000
+@H        -3.76076000        +1.91522000        +0.38406000
+@H        +3.37234000        +2.13782000        -0.35195000
+@H        +2.48236000        +2.42488000        +1.14651000
+@H        +4.02182000        +0.00994000        +0.41161000
+@H        +3.07359000        +0.18738000        +1.88928000
+@H        -2.21148000        -2.17765000        -1.85937000
+@H        -1.38062000        -3.42697000        -0.88096000
+@H        -4.03855000        +0.43623000        +1.35671000
+@H        -3.63120000        +0.31700000        -0.38495000
+@C        +2.35450000        -2.01267000        -0.16812000
+@H        +3.26311000        -2.00678000        -0.77366000
+@H        +2.54990000        -2.57059000        +0.75079000
+@H        +1.57335000        -2.52896000        -0.72872000
+@H        +1.03270000        +2.19943000        -1.08064000
+$end
+
+$rem
+JOBTYPE                   SP
+METHOD                    B3LYP
+DFT_D                     d3_op
+BASIS                     6-311++G(d,p)
+SYMMETRY                  False
+THRESH                    12
+SCF_CONVERGENCE           8
+MAX_SUB_FILE_NUM          128
+MEM_STATIC                400
+MEM_TOTAL                 4000
+$end
+--------------------------------------------------------------
+ Adding empirical dispersion correction 
+ ----------------------------------------------------------------
+ Doing -D3(op) with
+ s6 =   1.00000
+ s8 =   0.78311
+ a1 =   0.30000
+ a2 =   4.25000
+ n  =  10.00000
+ -D3 energy without 3body term =     -0.0372334024 hartrees
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C       0.2477400000     2.4632300000     5.1715400000
+    2      C       0.6513000000     1.0048200000     5.5843000000
+    3      C      -1.1569600000     2.6505800000     4.6293600000
+    4      C      -0.3495300000    -0.0980800000     5.3089200000
+    5      O      -2.0666800000     2.2066700000     5.5252500000
+    6      O      -1.4483200000     3.1777400000     3.5867700000
+    7      O      -0.8886000000    -0.0095700000     4.0793900000
+    8      O      -0.5970400000    -0.9904200000     6.0847000000
+    9      C      -1.8363000000    -1.0290600000     3.7199900000
+   10      C      -3.4456400000     2.2932700000     5.1247900000
+   11      C       1.3551200000     2.8180900000     4.1506800000
+   12      C       2.6557400000     3.1353500000     4.9141400000
+   13      C       3.0684000000     1.7118600000     5.3885900000
+   14      C       1.9692700000     0.8253600000     4.7382100000
+   15      O       1.6534400000     1.5549800000     3.5418300000
+   16      H       0.3031500000     3.1062100000     6.0545900000
+   17      H       0.8642700000     0.9379300000     6.6496700000
+   18      H      -2.6624500000    -1.0484200000     4.4326300000
+   19      H      -3.7357200000     3.3335700000     4.9696500000
+   20      H       3.3973800000     3.5561700000     4.2336400000
+   21      H       2.5074000000     3.8432300000     5.7321000000
+   22      H       4.0468600000     1.4282900000     4.9972000000
+   23      H       3.0986300000     1.6057300000     6.4748700000
+   24      H      -2.1864400000    -0.7593000000     2.7262200000
+   25      H      -1.3555800000    -2.0086200000     3.7046300000
+   26      H      -4.0135100000     1.8545800000     5.9423000000
+   27      H      -3.6061600000     1.7353500000     4.2006400000
+   28      C       2.3795400000    -0.5943200000     4.4174700000
+   29      H       3.2881500000    -0.5884300000     3.8119300000
+   30      H       2.5749400000    -1.1522400000     5.3363800000
+   31      H       1.5983900000    -1.1106100000     3.8568700000
+   32      H       1.0577400000     3.6177800000     3.5049500000
+   33      GH      0.2227000000     1.0448800000     0.5859500000
+   34      GH      0.6262600000    -0.4135300000     0.9987100000
+   35      GH     -1.1820000000     1.2322300000     0.0437700000
+   36      GH     -0.3745700000    -1.5164300000     0.7233300000
+   37      GH     -2.0917200000     0.7883200000     0.9396600000
+   38      GH     -1.4733600000     1.7593900000    -0.9988200000
+   39      GH     -0.9136400000    -1.4279200000    -0.5062000000
+   40      GH     -0.6220800000    -2.4087700000     1.4991100000
+   41      GH     -1.8613400000    -2.4474100000    -0.8656000000
+   42      GH     -3.4706800000     0.8749200000     0.5392000000
+   43      GH      1.3300800000     1.3997400000    -0.4349100000
+   44      GH      2.6307000000     1.7170000000     0.3285500000
+   45      GH      3.0433600000     0.2935100000     0.8030000000
+   46      GH      1.9442300000    -0.5929900000     0.1526200000
+   47      GH      1.6284000000     0.1366300000    -1.0437600000
+   48      GH      0.2781100000     1.6878600000     1.4690000000
+   49      GH      0.8392300000    -0.4804200000     2.0640800000
+   50      GH     -2.6874900000    -2.4667700000    -0.1529600000
+   51      GH     -3.7607600000     1.9152200000     0.3840600000
+   52      GH      3.3723400000     2.1378200000    -0.3519500000
+   53      GH      2.4823600000     2.4248800000     1.1465100000
+   54      GH      4.0218200000     0.0099400000     0.4116100000
+   55      GH      3.0735900000     0.1873800000     1.8892800000
+   56      GH     -2.2114800000    -2.1776500000    -1.8593700000
+   57      GH     -1.3806200000    -3.4269700000    -0.8809600000
+   58      GH     -4.0385500000     0.4362300000     1.3567100000
+   59      GH     -3.6312000000     0.3170000000    -0.3849500000
+   60      GH      2.3545000000    -2.0126700000    -0.1681200000
+   61      GH      3.2631100000    -2.0067800000    -0.7736600000
+   62      GH      2.5499000000    -2.5705900000     0.7507900000
+   63      GH      1.5733500000    -2.5289600000    -0.7287200000
+   64      GH      1.0327000000     2.1994300000    -1.0806400000
+ ----------------------------------------------------------------
+ Nuclear Repulsion Energy =  1265.6976644724 hartrees
+ There are       61 alpha and       61 beta electrons
+ Requested basis set is 6-311++G(d,p)
+ There are 352 shells and 928 basis functions
+
+ Total QAlloc Memory Limit   4000 MB
+ Mega-Array Size       392 MB
+ MEM_STATIC part       400 MB
+ A cutoff of  1.0D-12 yielded  45576 shell pairs
+ There are    314674 function pairs (    333801 Cartesian)
+ Smallest overlap matrix eigenvalue = 3.21E-07
+ Linear dependence detected in AO basis
+ Number of orthogonalized atomic orbitals = 924
+ Maximum deviation from orthogonality = 1.959E-10
+
+ Scale SEOQF with 1.000000e-01/1.000000e-01/1.000000e-02
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =     0.0000000211 hartrees
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+ A restricted hybrid HF-DFT SCF calculation will be
+ performed using Pulay DIIS extrapolation
+ Exchange:     0.2000 Hartree-Fock + 0.0800 Slater + 0.7200 B88
+ Correlation:  0.1900 VWN1RPA + 0.8100 LYP
+ Using SG-1 standard quadrature grid
+ Dispersion:   Grimme D3
+ SCF converges when DIIS error is below 1.0E-08
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+ ---------------------------------------
+  Cycle       Energy         DIIS Error
+ ---------------------------------------
+    1    -808.4584770876      1.48E-02
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+    2    -804.8742272668      1.91E-03
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+    3    -804.3877201803      3.17E-03
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+    4    -805.1507769067      7.38E-04
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+    5    -805.1950392144      1.88E-04
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+    6    -805.1973524391      7.51E-05
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+    7    -805.1977788519      1.77E-05
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+    8    -805.1978005994      6.21E-06
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+    9    -805.1978047708      1.81E-06
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+   10    -805.1978050000      8.64E-07
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+   11    -805.1978048749      2.06E-07
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+   12    -805.1978049635      7.83E-08
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+   13    -805.1978049358      1.82E-08
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 58:
+
+ No atomic polarizability available.
+
+
+ Q-Chem warning in module /opt/software/qchem/qchem-5.0.1/libgen/Atomic_PolEc.C, line 73:
+
+ No atomic polarizability available.
+
+   14    -805.1978049288      6.72E-09 Convergence criterion met
+ ---------------------------------------
+ SCF time:  CPU 7785.80 s  wall 7803.96 s
+ SCF   energy in the final basis set = -805.19780493
+ Total energy in the final basis set = -805.19780493
+ 
+ --------------------------------------------------------------
+ 
+                    Orbital Energies (a.u.)
+ --------------------------------------------------------------
+ 
+ Alpha MOs
+ -- Occupied --
+-19.175 -19.174 -19.131 -19.119 -19.116 -10.309 -10.306 -10.246
+-10.232 -10.230 -10.228 -10.205 -10.204 -10.179 -10.178 -10.171
+ -1.120  -1.113  -1.063  -1.030  -1.027  -0.832  -0.796  -0.784
+ -0.746  -0.729  -0.697  -0.655  -0.606  -0.590  -0.569  -0.562
+ -0.534  -0.518  -0.510  -0.492  -0.490  -0.483  -0.476  -0.472
+ -0.461  -0.443  -0.434  -0.425  -0.416  -0.405  -0.397  -0.389
+ -0.381  -0.374  -0.369  -0.361  -0.355  -0.351  -0.333  -0.332
+ -0.320  -0.313  -0.289  -0.281  -0.274
+ -- Virtual --
+ -0.020  -0.012  -0.007  -0.001   0.006   0.008   0.012   0.017
+  0.021   0.027   0.029   0.034   0.036   0.039   0.042   0.044
+  0.049   0.051   0.054   0.057   0.060   0.064   0.066   0.069
+  0.069   0.074   0.076   0.080   0.081   0.084   0.087   0.091
+  0.092   0.096   0.098   0.102   0.105   0.108   0.109   0.111
+  0.114   0.115   0.116   0.118   0.123   0.124   0.125   0.127
+  0.130   0.131   0.133   0.133   0.137   0.139   0.140   0.142
+  0.145   0.146   0.148   0.149   0.152   0.155   0.156   0.157
+  0.158   0.162   0.164   0.166   0.167   0.171   0.172   0.174
+  0.178   0.180   0.182   0.183   0.184   0.188   0.189   0.190
+  0.192   0.194   0.196   0.198   0.200   0.205   0.205   0.209
+  0.211   0.211   0.217   0.218   0.220   0.222   0.224   0.226
+  0.229   0.230   0.232   0.234   0.237   0.240   0.243   0.246
+  0.248   0.251   0.251   0.253   0.258   0.259   0.262   0.265
+  0.266   0.269   0.270   0.275   0.276   0.278   0.282   0.285
+  0.288   0.291   0.291   0.293   0.294   0.297   0.302   0.304
+  0.306   0.310   0.311   0.314   0.317   0.319   0.322   0.324
+  0.326   0.328   0.329   0.332   0.341   0.344   0.345   0.347
+  0.349   0.351   0.356   0.357   0.360   0.362   0.367   0.370
+  0.371   0.377   0.378   0.380   0.383   0.386   0.388   0.388
+  0.390   0.394   0.397   0.402   0.404   0.406   0.409   0.410
+  0.413   0.417   0.423   0.426   0.427   0.428   0.431   0.434
+  0.440   0.444   0.444   0.447   0.448   0.456   0.460   0.462
+  0.464   0.467   0.472   0.474   0.482   0.490   0.491   0.494
+  0.497   0.500   0.503   0.507   0.509   0.517   0.522   0.526
+  0.527   0.534   0.538   0.541   0.551   0.556   0.558   0.560
+  0.565   0.571   0.572   0.576   0.579   0.583   0.591   0.596
+  0.603   0.603   0.605   0.618   0.622   0.622   0.625   0.629
+  0.632   0.635   0.640   0.644   0.645   0.650   0.651   0.661
+  0.666   0.669   0.670   0.674   0.677   0.682   0.690   0.691
+  0.692   0.697   0.701   0.704   0.711   0.715   0.718   0.718
+  0.723   0.725   0.730   0.735   0.744   0.747   0.748   0.750
+  0.756   0.762   0.764   0.768   0.772   0.775   0.777   0.779
+  0.781   0.788   0.790   0.796   0.803   0.805   0.809   0.814
+  0.823   0.827   0.829   0.837   0.839   0.845   0.848   0.852
+  0.855   0.860   0.866   0.871   0.881   0.884   0.887   0.895
+  0.903   0.910   0.916   0.920   0.935   0.941   0.953   0.961
+  0.964   0.969   0.978   0.989   0.991   0.999   1.005   1.010
+  1.019   1.024   1.034   1.041   1.045   1.054   1.061   1.067
+  1.073   1.077   1.085   1.088   1.094   1.100   1.104   1.120
+  1.121   1.127   1.130   1.139   1.143   1.149   1.151   1.157
+  1.164   1.185   1.189   1.194   1.196   1.200   1.209   1.215
+  1.225   1.226   1.229   1.239   1.244   1.252   1.260   1.266
+  1.267   1.278   1.283   1.292   1.295   1.300   1.307   1.313
+  1.320   1.320   1.326   1.331   1.348   1.350   1.361   1.369
+  1.373   1.378   1.387   1.392   1.410   1.426   1.430   1.430
+  1.446   1.447   1.465   1.472   1.487   1.493   1.507   1.517
+  1.518   1.521   1.535   1.536   1.546   1.558   1.564   1.567
+  1.574   1.585   1.591   1.599   1.607   1.612   1.618   1.625
+  1.632   1.636   1.640   1.649   1.656   1.658   1.665   1.671
+  1.679   1.682   1.687   1.697   1.698   1.707   1.710   1.713
+  1.720   1.723   1.731   1.732   1.738   1.741   1.749   1.763
+  1.766   1.767   1.776   1.780   1.788   1.794   1.798   1.805
+  1.811   1.820   1.824   1.828   1.833   1.836   1.844   1.848
+  1.854   1.859   1.863   1.866   1.873   1.879   1.882   1.888
+  1.893   1.895   1.903   1.910   1.911   1.922   1.926   1.933
+  1.941   1.943   1.946   1.950   1.958   1.959   1.973   1.980
+  1.985   1.989   1.994   1.998   2.008   2.011   2.017   2.023
+  2.036   2.036   2.045   2.049   2.064   2.072   2.077   2.085
+  2.087   2.092   2.100   2.107   2.110   2.117   2.128   2.131
+  2.137   2.140   2.149   2.154   2.156   2.166   2.169   2.173
+  2.176   2.184   2.192   2.194   2.199   2.206   2.225   2.230
+  2.244   2.247   2.257   2.265   2.272   2.282   2.296   2.307
+  2.314   2.335   2.342   2.353   2.355   2.360   2.369   2.382
+  2.387   2.389   2.395   2.409   2.411   2.423   2.425   2.433
+  2.439   2.455   2.459   2.468   2.475   2.482   2.484   2.493
+  2.505   2.507   2.518   2.518   2.527   2.535   2.537   2.542
+  2.549   2.553   2.557   2.562   2.569   2.579   2.589   2.592
+  2.606   2.611   2.617   2.633   2.636   2.643   2.652   2.660
+  2.661   2.669   2.679   2.686   2.694   2.706   2.716   2.720
+  2.726   2.735   2.742   2.750   2.752   2.757   2.760   2.777
+  2.779   2.783   2.794   2.797   2.807   2.817   2.825   2.828
+  2.832   2.841   2.853   2.857   2.860   2.868   2.871   2.890
+  2.890   2.895   2.902   2.910   2.920   2.930   2.932   2.941
+  2.951   2.970   2.976   2.979   2.996   2.996   3.004   3.009
+  3.010   3.031   3.035   3.039   3.045   3.053   3.055   3.059
+  3.068   3.074   3.090   3.099   3.104   3.108   3.114   3.124
+  3.133   3.136   3.147   3.156   3.157   3.174   3.183   3.187
+  3.192   3.206   3.211   3.230   3.232   3.234   3.242   3.252
+  3.257   3.264   3.284   3.288   3.293   3.296   3.308   3.314
+  3.320   3.349   3.353   3.371   3.374   3.384   3.389   3.398
+  3.407   3.411   3.422   3.433   3.451   3.457   3.490   3.501
+  3.522   3.538   3.550   3.564   3.573   3.580   3.586   3.597
+  3.598   3.605   3.617   3.622   3.637   3.650   3.655   3.679
+  3.715   3.732   3.756   3.768   3.790   3.806   3.821   3.832
+  3.842   3.847   3.854   3.855   3.884   3.889   3.921   3.935
+  3.954   3.964   3.972   3.976   4.027   4.045   4.066   4.068
+  4.083   4.089   4.099   4.111   4.124   4.158   4.163   4.168
+  4.182   4.229   4.241   4.285   4.292   4.445   4.511   4.542
+  4.556   4.574   4.581   4.659   4.690   4.709   4.753   4.781
+  4.803   4.817   4.830   4.842   4.859   4.874   4.887   4.902
+  4.914   4.918   4.940   4.952   4.955   4.959   4.964   4.977
+  4.999   5.083   5.097   5.130   5.142   5.146   5.172   5.193
+  5.202   5.243   5.273   5.288   5.303   5.332   5.343   5.402
+  5.429   5.492   5.555   5.580   5.639   5.649   5.674   5.691
+  5.707   5.721   5.751   5.925   5.929   6.130   6.148   7.373
+  7.428   7.476   7.560   7.608   7.627   7.690   7.711   7.743
+  7.756   7.771   7.787   7.810   7.814   7.843   7.857   7.881
+  7.917   7.961   7.994   8.015   8.034   8.047   8.081   8.187
+  8.258   8.308   8.355   8.472   8.494   8.539   8.735   8.926
+  9.946   9.981  10.002  10.015  10.028  10.029  10.050  10.057
+ 10.095  10.137  10.230  13.569  13.615  13.661  13.684  13.703
+ 13.711  13.739  13.933  13.945  14.010  14.104  14.168  14.186
+ 14.291  14.311  18.603  18.616  18.676  18.785  18.871  23.826
+ 23.860  23.867  23.911  23.925  23.940  23.973  23.989  24.003
+ 24.006  24.084  49.930  49.976  50.019  50.052  50.062  69.786
+ 69.891  69.920  69.956  69.966  69.989  70.000  70.016  70.030
+ 70.054  70.073 139.698 139.734 139.764 139.775 139.898
+ --------------------------------------------------------------
+ 
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.053024
+      2 C                     0.316548
+      3 C                    -0.679669
+      4 C                    -0.802757
+      5 O                     0.042592
+      6 O                    -0.086097
+      7 O                     0.037152
+      8 O                    -0.092444
+      9 C                    -0.341958
+     10 C                    -0.158695
+     11 C                    -0.035079
+     12 C                    -0.692235
+     13 C                    -0.270993
+     14 C                    -0.190448
+     15 O                     0.256844
+     16 H                     0.243647
+     17 H                     0.285180
+     18 H                     0.238621
+     19 H                     0.169222
+     20 H                     0.175040
+     21 H                     0.137699
+     22 H                     0.169096
+     23 H                     0.144707
+     24 H                     0.090804
+     25 H                     0.214047
+     26 H                     0.167404
+     27 H                     0.186781
+     28 C                    -0.299900
+     29 H                     0.199937
+     30 H                     0.198596
+     31 H                     0.225953
+     32 H                     0.277477
+     33 GH                   -0.060472
+     34 GH                    0.090333
+     35 GH                    0.065966
+     36 GH                    0.065115
+     37 GH                   -0.018637
+     38 GH                   -0.000086
+     39 GH                   -0.000804
+     40 GH                   -0.014328
+     41 GH                    0.005528
+     42 GH                    0.009566
+     43 GH                   -0.023769
+     44 GH                   -0.043494
+     45 GH                   -0.003552
+     46 GH                    0.014817
+     47 GH                   -0.001367
+     48 GH                   -0.012603
+     49 GH                   -0.130098
+     50 GH                    0.001787
+     51 GH                    0.001954
+     52 GH                   -0.003291
+     53 GH                   -0.013142
+     54 GH                   -0.004932
+     55 GH                   -0.017011
+     56 GH                    0.000259
+     57 GH                   -0.000540
+     58 GH                    0.003921
+     59 GH                    0.000175
+     60 GH                    0.014728
+     61 GH                    0.000163
+     62 GH                   -0.002225
+     63 GH                    0.000541
+     64 GH                    0.001451
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                 0.0000
+    Dipole Moment (Debye)
+         X       0.0514      Y       0.4929      Z       1.0999
+       Tot       1.2064
+    Quadrupole Moments (Debye-Ang)
+        XX     -81.7503     XY       2.6390     YY     -94.8678
+        XZ       3.3162     YZ      14.6674     ZZ     -92.1299
+    Octopole Moments (Debye-Ang^2)
+       XXX     -76.1862    XXY    -109.7250    XYY      -1.3984
+       YYY    -364.5323    XXZ    -384.2975    XYZ       1.9006
+       YYZ    -434.6435    XZZ      17.5433    YZZ      -3.4629
+       ZZZ   -1385.0014
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX   -2163.4429   XXXY    -143.5341   XXYY    -745.8087
+      XYYY     -26.5867   YYYY   -2342.2351   XXXZ    -400.8687
+      XXYZ    -496.9717   XYYZ     -43.1394   YYYZ   -1659.5851
+      XXZZ   -2282.9571   XYZZ     -53.5070   YYZZ   -2491.4130
+      XZZZ      35.4855   YZZZ    -957.5584   ZZZZ  -13860.0436
+ -----------------------------------------------------------------
+Archival summary:
+1\1\vega01.cac.cornell.edu\SP\ProcedureUnspecified\BasisUnspecified\51116h32\jj585\MonApr1618:36:512018MonApr1618:36:512018\0\\#,ProcedureUnspecified,BasisUnspecified,\\0,1\O\C,1,1.34543\O,2,1.20804,1,123.598\C,1,1.43759,2,116.484,3,1.88648,0\H,4,1.08763,1,105.353,2,177.393,0\H,4,1.09122,1,110.39,2,57.5626,0\H,4,1.09127,1,110.468,2,-63.158,0\C,2,1.51456,1,112.521,3,177.156,0\H,8,1.08851,2,105.218,1,169.467,0\C,8,1.5685,2,117.337,1,44.9607,0\H,10,1.09374,8,108.73,2,123.22,0\C,10,1.51731,8,116.554,2,4.55568,0\O,12,1.20407,10,125.979,8,-126.895,0\O,12,1.35176,10,110.223,8,56.6764,0\C,14,1.43854,12,116.158,10,-178.482,0\H,15,1.08777,14,105.482,12,177.492,0\H,15,1.09107,14,110.6,12,-62.8398,0\H,15,1.09137,14,110.239,12,57.9539,0\C,10,1.54738,8,101.696,2,-119.387,0\H,19,1.07,10,111.755,8,159.179,0\O,19,1.43358,10,103.124,8,32.1918,0\C,21,1.43646,19,98.0224,10,-55.9256,0\C,22,1.51218,21,111.091,19,-178.393,0\H,23,1.09134,22,111.033,21,-57.0184,0\H,23,1.09192,22,109.775,21,62.6469,0\H,23,1.09264,22,110.458,21,-177.522,0\C,19,1.54115,10,108.926,8,-76.1436,0\H,27,1.09096,19,110.128,10,-170.072,0\H,27,1.09186,19,112.95,10,-49.1929,0\C,22,1.55466,21,102.371,19,-54.4128,0\H,30,1.09132,22,109.614,21,-87.4148,0\H,30,1.09187,22,112.355,21,152.676,0\Gh,24,2.04635,23,124.742,22,57.8201,0\Gh,33,1.08851,24,161.619,23,106.347,0\Gh,34,1.51456,33,105.218,24,76.909,0\Gh,35,1.20804,34,123.816,33,-13.3842,0\Gh,35,1.34543,34,112.521,33,169.467,0\Gh,37,1.43759,35,116.484,34,179.042,0\Gh,38,1.08763,37,105.353,35,177.393,0\Gh,38,1.09122,37,110.39,35,57.5626,0\Gh,38,1.09127,37,110.468,35,-63.158,0\Gh,34,1.5685,33,111.41,24,-154.931,0\Gh,42,1.09374,34,108.73,33,1.88124,0\Gh,42,1.51731,34,116.554,33,-116.783,0\Gh,44,1.20407,42,125.979,34,-126.895,0\Gh,44,1.35176,42,110.223,34,56.6764,0\Gh,46,1.43854,44,116.158,42,-178.482,0\Gh,47,1.08777,46,105.482,44,177.492,0\Gh,47,1.09107,46,110.6,44,-62.8398,0\Gh,47,1.09137,46,110.239,44,57.9539,0\Gh,42,1.54738,34,101.696,33,119.274,0\Gh,51,1.07,42,111.755,34,159.179,0\Gh,51,1.43358,42,103.124,34,32.1918,0\Gh,53,1.43646,51,98.0224,42,-55.9256,0\Gh,54,1.51218,53,111.091,51,-178.393,0\Gh,55,1.09134,54,111.033,53,-57.0184,0\Gh,55,1.09192,54,109.775,53,62.6469,0\Gh,55,1.09264,54,110.458,53,-177.522,0\Gh,51,1.54115,42,108.926,34,-76.1436,0\Gh,59,1.09096,51,110.128,42,-170.072,0\Gh,59,1.09186,51,112.95,42,-49.1929,0\Gh,54,1.55466,53,102.371,51,-54.4128,0\Gh,62,1.09132,54,109.614,53,-87.4148,0\Gh,62,1.09187,54,112.355,53,152.676,0\\\@
+
+ Total job time:  7806.45s(wall), 7788.20s(cpu) 
+ Mon Apr 16 18:36:51 2018
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+
+0 sent ACK to 0 
+now end server 0 ... 
