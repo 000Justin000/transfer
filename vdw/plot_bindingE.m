@@ -3,14 +3,15 @@ close all, clear all;
 
 set(gca,'TickLabelInterpreter', 'latex');
 
-distances = [3.0, 3.5, 4.0, 4.2, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5.0, 5.1, ...
-             5.2, 5.3, 5.4, 5.6, 5.7, 5.8, 5.9, 6.0, 6.5, 7.0, 8.0, 10.0];
+distances = [3.0, 3.5, 3.7, 3.9, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, ...
+             5.0, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6.0, 6.5, 7.0, 8.0, 10.0];
 
-e1001  = dlmread('fix/qchem_1001_B3LYP_d3_op_6-311++G**/binding_energies',':');  e1001  = e1001(:,2)/2/29/4.184;
-e1101  = dlmread('fix/qchem_1101_B3LYP_d3_op_6-311++G**/binding_energies',':');  e1101  = e1101(:,2)/2/32/4.184;
-e1111  = dlmread('fix/qchem_1111_B3LYP_d3_op_6-311++G**/binding_energies',':');  e1111  = e1111(:,2)/2/35/4.184;
+e1001  = dlmread('fix/qchem_0000_B3LYP_d3_op_6-311++G**/binding_energies',':');  e1001  = e1001(:,2)/2/29/4.184;
+e1101  = dlmread('fix/qchem_0100_B3LYP_d3_op_6-311++G**/binding_energies',':');  e1101  = e1101(:,2)/2/32/4.184;
+e1111  = dlmread('fix/qchem_0110_B3LYP_d3_op_6-311++G**/binding_energies',':');  e1111  = e1111(:,2)/2/35/4.184;
 
-rg = [5,6,7,8,9,10,11,12,13,14,15,16,18,20,21,22,23,24];
+%rg = [5,6,7,8,9,10,11,12,13,14,15,16,18,20,21,22,23,24];
+rg = [1:29];
 dist = 4.3:0.02:10.0;
 E1001  = interp1(distances, e1001, dist, 'spline');
 E1101  = interp1(distances, e1101, dist, 'spline');
@@ -62,13 +63,15 @@ close all, clear all;
 set(gca,'TickLabelInterpreter', 'latex');
 
 distances = [3.0, 3.5, 3.7, 3.9, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, ...
-             5.0, 5.1, 5.2, 5.3, 5.4, 5.6, 5.7, 5.8, 5.9, 6.0, 6.5, 7.0, 8.0, 10.0];
+             5.0, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6.0, 6.5, 7.0, 8.0, 10.0];
 
-e10n01 = dlmread('fix/qchem_10n01_B3LYP_d3_op_6-311++G**/binding_energies',':'); e10n01 = e10n01(:,2)/2/24/4.184;
-e11n01 = dlmread('fix/qchem_11n01_B3LYP_d3_op_6-311++G**/binding_energies',':'); e11n01 = e11n01(:,2)/2/27/4.184;
-e11n11 = dlmread('fix/qchem_11n11_B3LYP_d3_op_6-311++G**/binding_energies',':'); e11n11 = e11n11(:,2)/2/30/4.184;
+e10n01 = dlmread('fix/qchem_00n00_B3LYP_d3_op_6-311++G**/binding_energies',':'); e10n01 = e10n01(:,2)/2/24/4.184;
+e11n01 = dlmread('fix/qchem_01n00_B3LYP_d3_op_6-311++G**/binding_energies',':'); e11n01 = e11n01(:,2)/2/27/4.184;
+e11n11 = dlmread('fix/qchem_01n10_B3LYP_d3_op_6-311++G**/binding_energies',':'); e11n11 = e11n11(:,2)/2/30/4.184;
 
-rg = [1:19,20,22,24,25,26,27,28];
+rg = [1:29];
+
+% rg = [1:19,20,22,24,25,26,27,28];
 dist = 3.4:0.02:10.0;
 E10n01 = interp1(distances, e10n01, dist, 'spline');
 E11n01 = interp1(distances, e11n01, dist, 'spline');
